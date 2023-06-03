@@ -10,7 +10,7 @@ export default async function NewsAndTweets () {
   const newsData = await getNews();
 
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row">
       <div className="w-1/2 flex flex-col justify-center m-20">
         <div className="pt-10 p-20 bg-primary-lightgreen">
           <p className="text-3xl text-primary-darkgreen">News</p>
@@ -33,7 +33,7 @@ export default async function NewsAndTweets () {
           </div>
         </div>
       </div>
-      <div className="w-1/2 h-500 mx-20 mt-20">
+      <div className="w-1/2 h-500 mx-20 mt-20 md:pb-24">
         <div className="tweets">
           <TwitterTimelineEmbed
             sourceType="profile"

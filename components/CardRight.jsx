@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const CardRight = ({ imageSrc, heading, text }) => {
   return (
-    <div className="flex ">
+    <div className="flex lg:flex-row md:flex-col sm:flex-col ">
       <div className="w-1/2 flex flex-col justify-center mx-20">
         <p className="text-3xl text-primary-darkgreen">{heading}</p>
         <p className="text-base mt-5 font-light">{text}</p>

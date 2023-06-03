@@ -1,5 +1,5 @@
 import 'tailwindcss/tailwind.css';
-import Image from "next/image";
+import Image from "next/legacy/image";
 import CardLeft from '@components/CardLeft';
 import ResearchCard from '@components/ResearchCard';
 
@@ -8,22 +8,25 @@ const Research = () => {
     <section className="w-full flex flex-col items-center">
       
       <div className="mt-40 w-full h-full flex flex-col items-center">
-        <p className="font-bold text-5xl mb-5 text-primary-darkgreen">
+        <p className="font-bold text-2xl md:text-5xl mb-5 text-primary-darkgreen">
           Towards Science-Based Forest & Agricultural
         </p>
-        <p className="font-bold text-5xl mb-36 text-primary-darkgreen">
+        <p className="font-bold text-2xl md:text-5xl mb-36 text-primary-darkgreen">
           Management With Minimal Environmental Impact
         </p>
         <div className="flex justify-center pb-36">
           <div className="flex flex-col p-20 bg-primary-lightgreen items-center">
+            <div className="w-full mb-10">
             <Image
-              src="/../public/assets/Research_Photo4.png"
+              src="/../public/assets/Research_Photo4.jpeg"
               className="pb-20"
-              width={900}
+              width={1000}
               height={450}
               layout="responsive"
               alt="Card Image"
             />
+            </div>
+            
             <p className="text-2xl items-center font-bold text-primary-darkgreen">
               What is the gap?
             </p>
@@ -40,8 +43,8 @@ const Research = () => {
         </div>
        
       </div>
-      <div className="flex items-center  md:flex-row md:justify-center">
-        <div className="w-full md:w-1/2 h-500 md:mx-2 mx-16">
+      <div className="flex flex-col md:flex-row items-start md:items-center">
+        <div className="md:w-1/2 mx-16 ">
           <p className="text-3xl text-primary-darkgreen">Research Subjects</p>
           <ol className="text-base mt-5 font-light list-decimal">
             <li>Groundwater Ecohydrology</li>
@@ -54,7 +57,7 @@ const Research = () => {
             <li>Functional Data Analysis</li>
           </ol>
         </div>
-        <div className="w-full md:w-1/2 flex flex-col justify-center px-16 mx-16 mt-0">
+        <div className="md:w-1/2 ml-16 mt-10 md:mt-0 ">
           <p className="text-3xl text-primary-darkgreen">NSERC subjects</p>
           <ol className="text-base mt-5 font-light list-decimal">
             <li>4504 Groundwater</li>
@@ -69,19 +72,19 @@ const Research = () => {
       <div className="my-20 mx-36">
         <ResearchCard heading="Where does the water go after it rains?" 
           text= "HG-WM research group focuses on developing new hydrologic transport models to identify source, pathway and residence time of water within watersheds. These models set a fundamental foundation for understanding the interaction between hydrological, geochemical and ecological processes. Check out related papers." 
-          imageSrc=""
+          imageSrc="/../public/assets/research1.jpg"
         />
         <ResearchCard heading="How does chemistry of rainwater alter on its way from being rainfall to being streamflow?" 
           text= "The extent to which chemistry of water particles alter along their way from land surface to stream depends on their pathways and the time they were in direct contact with solute sources within the watershed. HG-WM research group combines new hydrologic transport models (developed in research area I) with geochemical algorithms to explore how chemistry of rainwater alter before being discharged into stream. Check out related papers."
-          imageSrc=""
+          imageSrc="/../public/assets/research2.png"
         />
         <ResearchCard heading="How do forests and agricultural developments impact water pathways and ultimately stream water quality and quantity?" 
           text= "Forest and agricultural land developments may alter the timing and pathways of water transport, and ultimately may alter hydro-geochemical processes within watershed and stream water quality and quantity. Climate variability may also exacerbate the impacts of forest and agricultural land developments on stream water quality and quantity. HG-WM research group extends new hydrologic transport and hydrogeochemical models (developed in research areas I & II) to explore these impacts. Check out related papers."
-          imageSrc=""
+          imageSrc="/../public/assets/research3.jpeg"
         />
         <ResearchCard heading="Where are suitable locations for forestry and agricultural land developments with minimal impact on water quality and quantity, under changing cliimate?" 
           text= "Research areas I & II & III inform watershed management decisions on locating areas where intensive agricultural and forestry practices can lead to negative environmental impacts on stream water quality & quantity. HG-WM research group develops hydro-geochemical mapping tools to identify areas sensitive to forestry and agricultural practices as well as climate variability at local to regional scales."
-          imageSrc=""
+          imageSrc="/../public/assets/research4.jpeg"
         />
       </div>
     </section>

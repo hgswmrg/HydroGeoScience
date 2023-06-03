@@ -4,7 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const CarouselWithText = () => {
   const carouselRef = useRef(null);
@@ -19,7 +19,7 @@ const CarouselWithText = () => {
           return prevSlide + 1;
         }
       });
-    }, 4000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);
@@ -54,7 +54,7 @@ const CarouselWithText = () => {
   };
 
   return (
-    <div>
+    <section className="h-600 pt-20">
       <Carousel
         showStatus={false}
         showIndicators={true}
@@ -68,20 +68,24 @@ const CarouselWithText = () => {
         swipeable={false}
         draggable={false}
         showArrows={false} // Hide arrow buttons
+        style={{height: '600px'}}
       >
-        <div className="relative w-screen h-300">
+        <div className="relative w-screen h-500">
           <Image
-            src="/../public/assets/LandingPage.png"
+            src="/../public/assets/FrontPage.png"
             alt="Landing Page Image"
-            width={1280}
-            height={300}
+            width={1500}
+            height={600}
+            objectFit="cover"
+            sizes="(max-width: 2000px) 100vw,
+        (max-height: 600px) 100vw"
           />
 
           <div className="absolute top-0 mt-40 left-0 w-full h-full flex flex-col  items-start ml-20 ">
             <p className="font-bold text-5xl mb-5 text-white">
               HydroGeoScience for Watershed
             </p>
-            <p className="font-bold text-5xl mb-5 text-white">
+            <p className="font-bold text-5xl  mb-5 text-white">
               Management Research Group
             </p>
             <p className="font-light text-lg  mb-5 text-white">
@@ -95,30 +99,44 @@ const CarouselWithText = () => {
             </Link>
           </div>
         </div>
-        <div className="relative">
-          <Image
-            src="/../public/assets/LandingPage.png"
-            alt="Landing Page Image"
-            width={3000}
-            height={500}
-          />
-
-          <div className="absolute top-0 mt-80 left-0 w-full h-full flex flex-col  items-start ml-20 ">
-            <p className="font-bold text-5xl mb-5 text-white">
-              News Heading
-            </p>
-
-            <Link href="/research">
-              <button className="flex hover:scale-105 transition duration-300 font-medium px-4 py-2 mt-4 text-primary-darkgreen bg-white rounded-lg">
-                Go To News
-              </button>
-            </Link>
-          </div>
-        </div>
 
         {/* Add more carousel slides as needed */}
+
+        <div className="relative w-screen h-500">
+        <Link href="/team">
+          <Image
+            src="/../public/assets/NewsJavad.jpeg"
+            alt="Landing Page Image"
+            width={1500}
+            height={600}
+          />
+
+         </Link>
+        </div>
+        <div className="relative w-screen h-500">
+        <Link href="/team">
+          <Image
+            src="/../public/assets/News2.jpeg"
+            alt="Landing Page Image"
+            width={1500}
+            height={600}
+          />
+
+         </Link>
+        </div>
+        <div className="relative w-screen h-500">
+        <Link href="/team">
+          <Image
+            src="/../public/assets/News3.jpeg"
+            alt="Landing Page Image"
+            width={1500}
+            height={600}
+          />
+
+         </Link>
+        </div>
       </Carousel>
-    </div>
+    </section>
   );
 };
 

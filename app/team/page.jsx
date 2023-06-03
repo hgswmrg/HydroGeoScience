@@ -1,5 +1,5 @@
 import TeamCard from '@components/TeamCard'
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { getProfile } from '@backend/sanity-utils';
 
 export default async function Team () {
@@ -46,37 +46,36 @@ export default async function Team () {
         </div>
       </div>
       <div className="mx-20">
-        <p mt-20 className="mt-36 font-bold text-3xl text-primary-darkgreen">Lab Management</p>
+        <p className="mt-36 font-bold text-3xl text-primary-darkgreen">Lab Management</p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />
         {filteredProfileData('director').map((profileItem) => (
-          <TeamCard name={profileItem.name} imagesrc={profileItem.profileImage} bio={profileItem.description} position={profileItem.position}/>
+          <TeamCard name={profileItem.name} imagesrc={profileItem.image} bio={profileItem.description} position={profileItem.position}/>
           
         ))}
-        <TeamCard name="Ali Ameli" imagesrc="/../public/assets/AAmeli.jpg" bio={ameli} position="Director"/>
-        <p mt-20 className="mt-24 font-bold text-3xl text-primary-darkgreen">Affiliated Researchers</p>
+        <p className="mt-24 font-bold text-3xl text-primary-darkgreen">Affiliated Researchers</p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />
-        <TeamCard name="Ardalan Tootchi" imagesrc="/../public/assets/ardalan.jpeg" bio={ardalan} position="Affiliated Researcher"/>
-        <TeamCard name="Asad Haris" imagesrc="/../public/assets/Asad.jpg" bio={asad} position="Post-Doctoral Research Fellow"/>
-        <p mt-20 className="mt-24 font-bold text-3xl text-primary-darkgreen">Graduate Students</p>
+        {filteredProfileData('affiliated').map((profileItem) => (
+          <TeamCard link={profileItem.link} name={profileItem.name} imagesrc={profileItem.image} bio={profileItem.description} position={profileItem.position}/>
+          
+        ))}
+        <p className="mt-24 font-bold text-3xl text-primary-darkgreen">Graduate Students</p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />
-        <TeamCard name="Joe Janssen" imagesrc="/../public/assets/LandingPage.png" bio={joe} position="PhD Student"/>
-        <TeamCard name="Hongyi Li" imagesrc="/../public/assets/LandingPage.png" bio={hongyi} position="MSc Student"/>
-        <TeamCard name="Hamed Sharif" imagesrc="/../public/assets/hamed.jpeg" bio={hamed} position="MSc Student"/>
-        <TeamCard name="Mahbod Taherian" imagesrc="/../public/assets/Mahbod.jpg" bio={mahbod} position="MSc Student"/>
-        <TeamCard name="Majid Bayati" imagesrc="/../public/assets/Majid.jpeg" bio={majid} position="PhD Student"/>
-        <p mt-20 className="mt-24 font-bold text-3xl text-primary-darkgreen">Undergraduate Students</p>
+        {filteredProfileData('graduate').map((profileItem) => (
+          <TeamCard link={profileItem.linkedIn} name={profileItem.name} imagesrc={profileItem.image} bio={profileItem.description} position={profileItem.position}/>
+          
+        ))}
+        <p className="mt-24 font-bold text-3xl text-primary-darkgreen">Undergraduate Students</p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />
-        <TeamCard name="Blaise Matlock" imagesrc="/../public/assets/Blaise.jpg" bio={blaise} position="Undergraduate Research Assistant"/>
-        <TeamCard name="Ray Han" imagesrc="/../public/assets/LandingPage.png" bio={lorepsum} position="Undergraduate Research Assistant"/>
-        <TeamCard name="Sara Jafroudi" imagesrc="/../public/assets/LandingPage.png" bio={lorepsum} position="Undergraduate Research Assistant"/>
-        <TeamCard name="Andrew Chen" imagesrc="/../public/assets/LandingPage.png" bio={lorepsum} position="Undergraduate Research Assistant"/>
-        <TeamCard name="Kylee Dyck" imagesrc="/../public/assets/LandingPage.png" bio={kylee} position="Undergraduate Research Assistant"/>
-        <TeamCard name="Oliver " imagesrc="/../public/assets/Oliver.jpeg" bio={oliver} position="Undergraduate Research Assistant"/>
-        <p mt-20 className="mt-24 font-bold text-3xl text-primary-darkgreen">Lab Alumni</p>
+        {filteredProfileData('undergraduate').map((profileItem) => (
+          <TeamCard link={profileItem.link} name={profileItem.name} imagesrc={profileItem.image} bio={profileItem.description} position={profileItem.position}/>
+          
+        ))}
+        <p className="mt-24 font-bold text-3xl text-primary-darkgreen">Lab Alumni</p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />
-        <TeamCard name="Emily Leung" imagesrc="/../public/assets/Emily.jpeg" bio={emily} position="Former Undergraduate Research Assistant"/>
-        <TeamCard name="Elana Shi" imagesrc="/../public/assets/Elana.jpeg" bio={elana} position="Former Undergraduate Research Assistant"/>
-        <TeamCard name="Edward Le" imagesrc="/../public/assets/LandingPage.png" bio={edward} position="Former Research Assistant/ Lab Manager"/>
+        {filteredProfileData('alumni').map((profileItem) => (
+          <TeamCard link={profileItem.link} name={profileItem.name} imagesrc={profileItem.image} bio={profileItem.description} position={profileItem.position}/>
+          
+        ))}
         </div>
 
     </section>

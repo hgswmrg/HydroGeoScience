@@ -34,7 +34,16 @@ export async function getProfile () {
     });
 
     return client.fetch(
-        groq`*[_type == "profile"]`
+        groq`*[_type == "profile"]{
+            name,
+            position,
+            description,
+            "image" : profileImage.asset->url,
+            profileType,
+            linkedIn,
+            
+
+        }`
     )
     
 }

@@ -21,7 +21,7 @@ export default {
         type: 'text',
       },
       {
-        name: 'LinkedIn',
+        name: 'linkedIn',
         title: 'LinkedIn',
         type: 'url',
       },

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import axios from "axios";
+import Image from "next/image";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -46,7 +47,11 @@ const ContactForm = () => {
   
   
   return (
-    <form className="max-w-md my-40 mx-auto" onSubmit={handleSubmit}>
+    <div className="flex">
+      <div className="w-1/2 p-36">
+      <Image className="pt-12" src="/../public/assets/logo.png" width={500} height={400} alt="Card Image" layout="responsive" />
+      </div>
+    <form className="max-w-md w-1/2 my-24" onSubmit={handleSubmit}>
         <div className="my-10">
             <p className="text-4xl font-bold pb-2 text-primary-darkgreen">Contact Us</p>
         </div>
@@ -126,6 +131,7 @@ const ContactForm = () => {
         Submit
       </button>
     </form>
+    </div>
   );
 };
 

@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const CardLeft = ({ imageSrc, heading, text }) => {
   return (
-    <div className="flex ">
-      <div className="w-1/2 h-500 mx-20 my-10 ">
+    <div className="flex lg:flex-row md:flex-col sm:flex-col">
+      <div className="w-1/2 h-500 mx-20 my-10 p-10">
         <Image className="pt-12" src={imageSrc} width={500} height={400} alt="Card Image" layout="responsive" />
       </div>
       <div className="w-1/2 flex flex-col justify-center m-20">
