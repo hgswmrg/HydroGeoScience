@@ -28,7 +28,7 @@ const ContactForm = () => {
   return (
     <div className="flex">
       <div className="w-1/2 p-36">
-      <Image className="pt-12" src="/../public/assets/logo.png" width={500} height={400} alt="Card Image" layout="responsive" />
+      <Image className="pt-12" src="/assets/logo.png" width={500} height={400} alt="Card Image" layout="responsive" />
       </div>
     <form className="max-w-md w-1/2 my-24" onSubmit={handleSubmit}>
         <div className="my-10">

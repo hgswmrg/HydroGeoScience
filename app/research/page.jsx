@@ -18,7 +18,7 @@ const Research = () => {
           <div className="flex flex-col p-20 bg-primary-lightgreen items-center">
             <div className="w-full mb-10">
             <Image
-              src="/../public/assets/Research_Photo4.jpeg"
+              src="/assets/Research_Photo4.jpeg"
               className="pb-20"
               width={1000}
               height={450}
@@ -72,19 +72,19 @@ const Research = () => {
       <div className="my-20 mx-36">
         <ResearchCard heading="Where does the water go after it rains?" 
           text= "HG-WM research group focuses on developing new hydrologic transport models to identify source, pathway and residence time of water within watersheds. These models set a fundamental foundation for understanding the interaction between hydrological, geochemical and ecological processes. Check out related papers." 
-          imageSrc="/../public/assets/research1.jpg"
+          imageSrc="/assets/research1.jpg"
         />
         <ResearchCard heading="How does chemistry of rainwater alter on its way from being rainfall to being streamflow?" 
           text= "The extent to which chemistry of water particles alter along their way from land surface to stream depends on their pathways and the time they were in direct contact with solute sources within the watershed. HG-WM research group combines new hydrologic transport models (developed in research area I) with geochemical algorithms to explore how chemistry of rainwater alter before being discharged into stream. Check out related papers."
-          imageSrc="/../public/assets/research2.png"
+          imageSrc="/assets/research2.png"
         />
         <ResearchCard heading="How do forests and agricultural developments impact water pathways and ultimately stream water quality and quantity?" 
           text= "Forest and agricultural land developments may alter the timing and pathways of water transport, and ultimately may alter hydro-geochemical processes within watershed and stream water quality and quantity. Climate variability may also exacerbate the impacts of forest and agricultural land developments on stream water quality and quantity. HG-WM research group extends new hydrologic transport and hydrogeochemical models (developed in research areas I & II) to explore these impacts. Check out related papers."
-          imageSrc="/../public/assets/research3.jpeg"
+          imageSrc="/assets/research3.jpeg"
         />
         <ResearchCard heading="Where are suitable locations for forestry and agricultural land developments with minimal impact on water quality and quantity, under changing cliimate?" 
           text= "Research areas I & II & III inform watershed management decisions on locating areas where intensive agricultural and forestry practices can lead to negative environmental impacts on stream water quality & quantity. HG-WM research group develops hydro-geochemical mapping tools to identify areas sensitive to forestry and agricultural practices as well as climate variability at local to regional scales."
-          imageSrc="/../public/assets/research4.jpeg"
+          imageSrc="/assets/research4.jpeg"
         />
       </div>
     </section>

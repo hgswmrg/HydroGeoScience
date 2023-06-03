@@ -20,8 +20,8 @@ const Home = () => {
           <CarouselWithText/>
           <CardCenter heading="Motivation" text={text1} />
           <ResearchTopicsContainer/>
-          <CardRight imageSrc={'/../public/assets/AAmeli.jpg'} heading="Ali Ameli (Director)" text={text2} />
-          <CardLeft imageSrc={'/../public/assets/UBC.jpg'} heading="Research Group" text={text3} />
+          <CardRight imageSrc={'/assets/AAmeli.jpg'} heading="Ali Ameli (Director)" text={text2} />
+          <CardLeft imageSrc={'/assets/UBC.jpg'} heading="Research Group" text={text3} />
           <NewsAndTweets/>
           
         </div>
