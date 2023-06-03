@@ -19,7 +19,7 @@ const TeamCard = ({ name, position, imagesrc, bio, link }) => {
         <p className="text-base mt-3 font-light">{bio}
         </p>
       </div>
-      {link != undefined && (console.log("found 1")) && (
+      {link != undefined  && (
           <div className="text-base">
             <FaLinkedin size={30} color="black"/>
             <Link href={link} className="text-base">

@@ -13,36 +13,15 @@ const ContactForm = () => {
     file: null,
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+  const handleChange = () => {
+    
   };
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setFormData((prevData) => ({
-      ...prevData,
-      file: file,
-    }));
+  const handleFileChange = () => {
+    
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log("Submit button clicked");
-  
-    try {
-      const response = await axios.post("/api/contact", formData);
-      console.log(formData);
-      console.log(response.data); // Log the entire response object
-      // TODO: Show success message to the user
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      // TODO: Show error message to the user
-    }
-  };
+  const handleSubmit = () => {}
   
   
   
