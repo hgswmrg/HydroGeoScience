@@ -127,7 +127,7 @@ const CarouselWithText = () => {
         <div className="relative w-screen h-500">
         <Link href="/team">
           <Image
-            src="/public/assets/News3.jpeg"
+            src="/assets/News3.jpeg"
             alt="Landing Page Image"
             width={1500}
             height={600}
