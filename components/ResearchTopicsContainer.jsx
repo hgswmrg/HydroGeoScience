@@ -3,10 +3,10 @@ import ResearchTopicCard from './ResearchTopicCard';
 
 const ResearchTopicsContainer = () => {
   const data = [
-    { text: 'Where does the water go after it rains?', imageSrc: '/../public/assets/research1.jpg' },
-    { text: 'How does chemistry of rainwater alter?', imageSrc: '/../public/assets/research2.png' },
-    { text: 'How do land developments impact water pathways? ', imageSrc: '/../public/assets/research3.jpeg' },
-    { text: 'Where are suitable locations for land developments?', imageSrc: '/../public/assets/research4.jpeg' },
+    { text: 'Where does the water go after it rains?', imageSrc: '/assets/research1.jpg' },
+    { text: 'How does chemistry of rainwater alter?', imageSrc: '/assets/research2.png' },
+    { text: 'How do land developments impact water pathways? ', imageSrc: '/assets/research3.jpeg' },
+    { text: 'Where are suitable locations for land developments?', imageSrc: '/assets/research4.jpeg' },
   ];
 
   return (
