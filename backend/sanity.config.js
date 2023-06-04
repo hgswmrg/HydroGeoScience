@@ -9,6 +9,7 @@ export default defineConfig({
 
   projectId: 'wefrxt7t',
   dataset: 'production',
+  basePath: "/admin",
 
   plugins: [deskTool(), visionTool()],
 

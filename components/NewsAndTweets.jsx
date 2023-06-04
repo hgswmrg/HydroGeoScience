@@ -3,9 +3,9 @@ import News from "./News";
 import { FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-import { getNews } from '@backend/sanity-utils';
+import { getNews } from "@backend/sanity-utils";
 
-export default async function NewsAndTweets () {
+export default async function NewsAndTweets() {
 
   const newsData = await getNews();
 

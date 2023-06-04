@@ -5,8 +5,9 @@ import CarouselWithText from './../components/Carousel';
 import CardLeft from '@components/CardLeft';
 import CardRight from '@components/CardRight';
 import CardCenter from '@components/CardCenter';
-import NewsAndTweets from '@components/NewsAndTweets';
+
 import ResearchTopicsContainer from '@components/ResearchTopicsContainer';
+import NewsAndTweets from '../components/NewsAndTweets';
 
 
 const text1 = "Decades after Hewlett and Troendle's writing, we still know little about the sources, pathways and residence time of water and solutes within headwaters and their parent watersheds. This lack of scientific knowledge has limited the ability to sufficiently predict the impacts of climate variability and land-use alteration on the quality and quantity of stream water. HydroGeoscience for Watershed Management (HG-WM) research group advances the scientific knowledge on the quantification of sources, pathways and residence time of water and solutes to inform watershed management, under changing climate and land-use. In doing so, we use physically-based and conceptual hydrologic models as well as we develop new physics-informed machine learning and statistical models.";
