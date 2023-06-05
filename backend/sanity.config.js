@@ -1,17 +1,18 @@
-import {defineConfig} from 'sanity'
+import { defineConfig } from 'sanity'
 import {deskTool} from 'sanity/desk'
-import {visionTool} from '@sanity/vision'
+
 import {schemaTypes} from './schemas'
+import { vercelDeployTool } from 'sanity-plugin-vercel-deploy'
+
 
 export default defineConfig({
   name: 'default',
   title: 'hgswmrg',
-
+  basePath: '/studio',
   projectId: 'wefrxt7t',
   dataset: 'production',
-  basePath: "/admin",
 
-  plugins: [deskTool(), visionTool()],
+  plugins: [deskTool(), vercelDeployTool(),],
 
   schema: {
     types: schemaTypes,
