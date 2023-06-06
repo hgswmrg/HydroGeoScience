@@ -7,15 +7,15 @@ const Research = () => {
   return (
     <section className="w-full flex flex-col items-center">
       
-      <div className="mt-40 w-full h-full flex flex-col items-center">
-        <p className="font-bold text-2xl md:text-5xl mb-5 text-primary-darkgreen">
+      <div className="mt-20 md:mt-40 w-full h-full flex flex-col items-center">
+        <p className="font-bold text-sm  md:text-5xl mb-2 md:mb-5 text-primary-darkgreen">
           Towards Science-Based Forest & Agricultural
         </p>
-        <p className="font-bold text-2xl md:text-5xl mb-36 text-primary-darkgreen">
+        <p className="flex font-bold text-sm  md:text-5xl md:mb-36 items-center text-primary-darkgreen">
           Management With Minimal Environmental Impact
         </p>
         <div className="flex justify-center pb-36">
-          <div className="flex flex-col p-20 bg-primary-lightgreen items-center">
+          <div className="flex flex-col p-4 md:p-20 bg-primary-lightgreen items-center">
             <div className="w-full mb-10">
             <Image
               src="/assets/Research_Photo4.jpeg"
@@ -27,16 +27,16 @@ const Research = () => {
             />
             </div>
             
-            <p className="text-2xl items-center font-bold text-primary-darkgreen">
+            <p className="text-base md:text-2xl items-center font-bold text-primary-darkgreen">
               What is the gap?
             </p>
-            <p className="max-w-5xl text-base mt-5 font-light">
+            <p className="max-w-5xl text-sm md:text-base mt-5 font-light">
               Land-use change due to forestry and agricultural practices have negatively impacted our environment. Stump harvesting forestry practice for biomass production in North of Europe is hypothesized to enhance the excessive transport of solutes (e.g., methyl mercury) toward surrounding aquatic ecosystems. Wetland drainage in North America due to agricultural intensification is hypothesized to enhance the risk of lake Eutrophication (growth of toxic green bacteria) as well as to enhance the risk of drought and flood in local and regional water bodies. These are only two simple examples of unscientifically-designed watershed management planning with catastrophic environmental impacts. So, how can we maximize forest biomass yield and agricultural productivity, while minimizing their environmental effects?
             </p>
-            <p className="text-2xl mt-10 items-center font-bold text-primary-darkgreen">
+            <p className="text-base md:text-2xl mt-10 items-center font-bold text-primary-darkgreen">
               How do we fill the gap?
             </p>
-            <p className="max-w-5xl text-base mt-5 font-light">
+            <p className="max-w-5xl text-sm md:text-base mt-5 font-light">
               UBC's HydroGeoScience for Watershed Management (HG-WM) research group advances the knowledge on materiel (water & solute) transport and reaction in deep and shallow subsurface as well as over the land surface. We also explore how material transport and reaction processes vary with land developments. This knowledge is critically required for science-based watershed management planing and, particularly, to locate areas where intensive agricultural and forestry practices can be conducted with minimal environmental impacts on local and regional ecosystems. Below read more about four interrelated research questions that HG-WM research group explores.
             </p>
           </div>
@@ -45,8 +45,8 @@ const Research = () => {
       </div>
       <div className="flex flex-col md:flex-row items-start md:items-center">
         <div className="md:w-1/2 mx-16 ">
-          <p className="text-3xl text-primary-darkgreen">Research Subjects</p>
-          <ol className="text-base mt-5 font-light list-decimal">
+          <p className="text-xl md:text-3xl text-primary-darkgreen">Research Subjects</p>
+          <ol className="text-sm md:text-base mt-5 font-light list-decimal">
             <li>Groundwater Ecohydrology</li>
             <li>Hydro-geological Engineering</li>
             <li>Watershed Management</li>
@@ -58,8 +58,8 @@ const Research = () => {
           </ol>
         </div>
         <div className="md:w-1/2 ml-16 mt-10 md:mt-0 ">
-          <p className="text-3xl text-primary-darkgreen">NSERC subjects</p>
-          <ol className="text-base mt-5 font-light list-decimal">
+          <p className="text-xl md:text-3xl text-primary-darkgreen">NSERC subjects</p>
+          <ol className="text-sm md:text-base mt-5 font-light list-decimal">
             <li>4504 Groundwater</li>
             <li>1007 Water Resources and Supply</li>
             <li>1501 Water Quality</li>
@@ -69,7 +69,7 @@ const Research = () => {
           </ol>
         </div>
       </div>
-      <div className="my-20 mx-36">
+      <div className="md:my-20 mx-10 mt-10 md:mt-0 md:mx-36">
         <ResearchCard heading="Where does the water go after it rains?" 
           text= "HG-WM research group focuses on developing new hydrologic transport models to identify source, pathway and residence time of water within watersheds. These models set a fundamental foundation for understanding the interaction between hydrological, geochemical and ecological processes. Check out related papers." 
           imageSrc="/assets/research1.jpg"

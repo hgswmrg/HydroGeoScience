@@ -33,7 +33,7 @@ export default async function NewsAndTweets() {
           </div>
         </div>
       </div>
-      <div className="w-full md:w-1/2 h-500 mx-20 mb-20 md:mb-0">
+      <div className="w-full md:w-1/2 h-500 mx-20 mb-20 md:mb-0 p-10 md:p-0">
       <p className="text-xl md:text-3xl font-medium mb-4 text-primary-darkgreen">Recent Tweets</p>
         <div className="tweets">
           <TwitterTimelineEmbed
