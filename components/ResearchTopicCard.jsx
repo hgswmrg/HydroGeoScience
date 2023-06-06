@@ -4,7 +4,7 @@ import Image from 'next/legacy/image';
 
 const ResearchTopicCard = ({text, imageSrc}) => {
   return (
-    <div className='h-200  w-1/4 md:p-10 '>
+    <div className='h-200  w-1/2 md:w-1/4 md:p-10 mb-10'>
         <Link href="/research">
             <div className="flex flex-col">
                 <Image className="" src={imageSrc} width={100} height={50} layout="responsive" 

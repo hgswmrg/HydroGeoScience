@@ -54,7 +54,7 @@ const CarouselWithText = () => {
   };
 
   return (
-    <section className="h-600 pt-20">
+    <section className="h-600 pt-12">
       <Carousel
         showStatus={false}
         showIndicators={true}
@@ -81,19 +81,19 @@ const CarouselWithText = () => {
         (max-height: 600px) 100vw"
           />
 
-          <div className="absolute top-0 mt-40 left-0 w-full h-full flex flex-col  items-start ml-20 ">
-            <p className="font-bold text-5xl mb-5 text-white">
+          <div className="absolute top-0 mt-10 md:mt-40 left-0 w-full h-full flex flex-col  items-start ml-20 ">
+            <p className="font-medium md:font-bold text-base md:text-5xl mb-2 md:mb-5 text-white">
               HydroGeoScience for Watershed
             </p>
-            <p className="font-bold text-5xl  mb-5 text-white">
+            <p className="font-medium md:font-bold text-base md:text-5xl  mb-5 text-white">
               Management Research Group
             </p>
-            <p className="font-light text-lg  mb-5 text-white">
+            <p className="font-light text-sm md:text-lg  mb-5 text-white hidden sm:block">
               Ali Ameli {"\u00A0"}{"\u00A0"}||{"\u00A0"}{"\u00A0"}EOSC
               {"\u00A0"}{"\u00A0"}||{"\u00A0"}{"\u00A0"}UBC{" "}
             </p>
             <Link href="/research">
-              <button className="hover:scale-105 transition duration-300 font-medium px-4 py-2 mt-4 text-primary-darkgreen bg-white rounded-lg">
+              <button className="hidden sm:block hover:scale-105 transition duration-300 font-medium px-4 py-2 mt-4 text-primary-darkgreen bg-white rounded-lg">
                 View Research
               </button>
             </Link>
