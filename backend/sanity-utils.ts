@@ -26,6 +26,19 @@ export async function getJobs () {
     
 }
 
+export async function getPublications () {
+    const client = createClient({
+        projectId: "wefrxt7t",
+        dataset: "production",
+        apiVersion: "2023-03-09",
+    });
+
+    return client.fetch(
+        groq`*[_type == "publications"]`
+    )
+    
+}
+
 export async function getProfile () {
     const client = createClient({
         projectId: "wefrxt7t",

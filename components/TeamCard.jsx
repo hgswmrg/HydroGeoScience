@@ -18,17 +18,16 @@ const TeamCard = ({ name, position, imagesrc, bio, link }) => {
         <p className="text-base mt-7 font-semibold text-primary-darkgreen">{position}</p>
         <p className="text-base mt-3 font-light">{bio}
         </p>
-      </div>
-      {link != undefined  && (
-          <div className="text-base">
-            <FaLinkedin size={30} color="black"/>
+        {link != undefined  && (
+          <div className="text-base py-3">
             <Link href={link} className="text-base">
-            <FaLinkedin size={30} color="black"/>
+            <FaLinkedin size={30} color="#0072b1"/>
           </Link>
           </div>
           
-          
         )}
+      </div>
+     
     </div>
   );
 }
