@@ -1,21 +1,13 @@
 "use client"
 
-import { useEffect , useState} from "react";
+
 import 'tailwindcss/tailwind.css';
 import Link from "next/link";
 import Image from "next/legacy/image";
 
-import Year2022 from "@components/Year2022"
+
 import { FaGraduationCap, FaOrcid} from 'react-icons/fa';
-import Year2021 from "@components/Year2021";
-import Year2020 from "@components/Year2020";
-import Year2019 from "@components/Year2019";
-import Year2018 from "@components/Year2018";
-import Year2017 from "@components/Year2017";
-import Year2015 from "@components/Year2015";
-import Year2016 from "@components/Year2016";
-import Year2014 from "@components/Year2014";
-import Year2013 from "@components/Year2013";
+
 import { getPublications } from "@backend/sanity-utils";
 import YearCard from "@components/YearCard";
 
@@ -23,6 +15,7 @@ import YearCard from "@components/YearCard";
 export default async function Publications () {
 
   const publicationsData = await getPublications();
+
 
   const filteredPublicationsData = (classification) => {
     return publicationsData.filter((item) => item.topic === classification);

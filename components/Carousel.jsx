@@ -5,11 +5,15 @@ import Link from "next/link";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Image from "next/legacy/image";
+import { getCarousel } from "@backend/sanity-utils";
 
-const CarouselWithText = () => {
+const CarouselWithText = ({data})  => {
+
+  const carouselData  = data;
+  
   const carouselRef = useRef(null);
   const [selectedSlide, setSelectedSlide] = useState(0);
-
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedSlide((prevSlide) => {
@@ -72,7 +76,7 @@ const CarouselWithText = () => {
       >
         <div className="relative w-screen h-500">
           <Image
-            src="/assets/FrontPage.png"
+            src="/assets/FrontPageImg.jpeg"
             alt="Landing Page Image"
             width={1500}
             height={600}
@@ -82,62 +86,36 @@ const CarouselWithText = () => {
           />
 
           <div className="absolute top-0 mt-10 md:mt-40 left-0 w-full h-full flex flex-col  items-start ml-20 ">
-            <p className="font-medium md:font-bold text-base md:text-5xl mb-2 md:mb-5 text-white">
-              HydroGeoScience for Watershed
-            </p>
-            <p className="font-medium md:font-bold text-base md:text-5xl  mb-5 text-white">
-              Management Research Group
-            </p>
-            <p className="font-light text-sm md:text-lg  mb-5 text-white hidden sm:block">
-              Ali Ameli {"\u00A0"}{"\u00A0"}||{"\u00A0"}{"\u00A0"}EOSC
-              {"\u00A0"}{"\u00A0"}||{"\u00A0"}{"\u00A0"}UBC{" "}
-            </p>
-            <Link href="/research">
-              <button className="hidden sm:block hover:scale-105 transition duration-300 font-medium px-4 py-2 mt-4 text-primary-darkgreen bg-white rounded-lg">
+            
+            {/*<Link href="/research">
+              <button className="hidden sm:block hover:scale-105 transition duration-300 font-medium ml-100 mr-60 px-4 py-2 mt-4 text-primary-darkgreen bg-white rounded-lg">
                 View Research
               </button>
-            </Link>
+  </Link>*/}
           </div>
         </div>
 
-        {/* Add more carousel slides as needed */}
+     
 
-        <div className="relative w-screen h-500">
-        <Link href="/team">
-          <Image
-            src="/assets/NewsJavad.jpeg"
-            alt="Landing Page Image"
-            width={1500}
-            height={600}
-          />
 
-         </Link>
-        </div>
-        <div className="relative w-screen h-500">
-        <Link href="/team">
-          <Image
-            src="/assets/News2.jpeg"
-            alt="Landing Page Image"
-            width={1500}
-            height={600}
-          />
-
-         </Link>
-        </div>
-        <div className="relative w-screen h-500">
-        <Link href="/team">
-          <Image
-            src="/assets/News3.jpeg"
-            alt="Landing Page Image"
-            width={1500}
-            height={600}
-          />
-
-         </Link>
-        </div>
+        {
+          carouselData.map((item, index) => (
+            <div key={index} className="relative w-screen h-500">
+              <Link href="/team" >
+                <Image
+                  src={item.image}
+                  alt="Landing Page Image"
+                  width={1500}
+                  height={600}
+                />
+              </Link>
+            </div>
+          ))
+        }
       </Carousel>
     </section>
   );
 };
+
 
 export default CarouselWithText;

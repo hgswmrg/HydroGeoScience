@@ -60,3 +60,19 @@ export async function getProfile () {
     )
     
 }
+
+export async function getCarousel () {
+    const client = createClient({
+        projectId: "wefrxt7t",
+        dataset: "production",
+        apiVersion: "2023-03-09",
+    });
+
+    return client.fetch(
+        groq`*[_type == "carousel"]{
+            name,
+            "image" : newsImage.asset->url,
+        }`
+    )
+    
+}
