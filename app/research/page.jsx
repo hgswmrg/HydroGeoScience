@@ -6,47 +6,45 @@ import ResearchCard from '@components/ResearchCard';
 const Research = () => {
   return (
     <section className="w-full flex flex-col items-center">
+      <p className="flex mt-40 text-center font-bold text-sm  md:text-5xl 2xl:text-6xl mb-2 md:mb-5 text-primary-darkgreen">
+          Towards Science-Based Watershed Management with Minimal Environmental Impacts
+        </p>
+      <div className="relative mt-20 w-screen h-400">
+        
+        <Image
+          src="/assets/Research_Photo4.jpeg"
+          alt="Publications Image"
+          height={1500}
+          width={3000}
+          objectFit="cover"
+          objectPosition="center"
+          layout="responsive"
+          priority="true"
+        />
       
-      <div className="mt-20 md:mt-40 w-full h-full flex flex-col items-center">
-        <p className="font-bold text-sm  md:text-5xl mb-2 md:mb-5 text-primary-darkgreen">
-          Towards Science-Based Forest & Agricultural
-        </p>
-        <p className="flex font-bold text-sm  md:text-5xl md:mb-36 items-center text-primary-darkgreen">
-          Management With Minimal Environmental Impact
-        </p>
-        <div className="flex justify-center pb-36">
-          <div className="flex flex-col p-4 md:p-20 bg-primary-lightgreen items-center">
-            <div className="w-full mb-10">
-            <Image
-              src="/assets/Research_Photo4.jpeg"
-              className="pb-20"
-              width={1000}
-              height={450}
-              layout="responsive"
-              alt="Card Image"
-            />
-            </div>
-            
-            <p className="text-base md:text-2xl items-center font-bold text-primary-darkgreen">
+    </div>
+      
+      <div className="mt-20 md:mt-24 w-full h-full flex flex-col items-center ">
+        <div className="flex flex-col justify-center w-screen items-center 2xl:mt-24 px-20">
+            <p className="text-base md:text-2xl 2xl:text-6xl mb-10 items-center font-bold text-primary-darkgreen">
               What is the gap?
             </p>
-            <p className="max-w-5xl text-sm md:text-base mt-5 font-light">
-              Land-use change due to forestry and agricultural practices have negatively impacted our environment. Stump harvesting forestry practice for biomass production in North of Europe is hypothesized to enhance the excessive transport of solutes (e.g., methyl mercury) toward surrounding aquatic ecosystems. Wetland drainage in North America due to agricultural intensification is hypothesized to enhance the risk of lake Eutrophication (growth of toxic green bacteria) as well as to enhance the risk of drought and flood in local and regional water bodies. These are only two simple examples of unscientifically-designed watershed management planning with catastrophic environmental impacts. So, how can we maximize forest biomass yield and agricultural productivity, while minimizing their environmental effects?
+            <p className="text-center mx-20 2xl:text-3xl text-sm md:text-base mt-5 font-normal">
+              Watershed management practices have negatively impacted our environment. Stump harvesting forestry practice for biomass production in North Europe is hypothesized to enhance the excessive transport of solutes (e.g., methyl mercury). Wetland drainage in North America due to agricultural intensification is hypothesized to enhance the risks of lakes Eutrophication and the risks of drought/flood. These are two simple examples of watershed management planning with negative environmental impacts. So, how can we maximize forest biomass yield and agricultural productivity, while minimizing their environmental effects?  
             </p>
-            <p className="text-base md:text-2xl mt-10 items-center font-bold text-primary-darkgreen">
+            <p className="text-base md:text-2xl mb-10 mt-20 2xl:text-6xl items-center font-bold text-primary-darkgreen">
               How do we fill the gap?
             </p>
-            <p className="max-w-5xl text-sm md:text-base mt-5 font-light">
-              UBC's HydroGeoScience for Watershed Management (HG-WM) research group advances the knowledge on materiel (water & solute) transport and reaction in deep and shallow subsurface as well as over the land surface. We also explore how material transport and reaction processes vary with land developments. This knowledge is critically required for science-based watershed management planing and, particularly, to locate areas where intensive agricultural and forestry practices can be conducted with minimal environmental impacts on local and regional ecosystems. Below read more about four interrelated research questions that HG-WM research group explores.
+            <p className="text-center mx-20 2xl:text-3xl text-sm md:text-base mt-5 font-normal">
+              HydroGeoScience for Watershed Management Laboratory advances quantitative knowledge on material (water & solute) transport in deep and shallow earth’s compartments. We also explore how material transport processes vary with land developments and climate variability. This knowledge is critically required for science-based watershed management planning and, particularly, to locate areas where intensive watershed management practices can be conducted with minimal environmental impacts on local and regional ecosystems. In doing so, we develop new physics-informed statistical machine-learning models to learn and infer patterns and processes using big data.
             </p>
-          </div>
         </div>
        
       </div>
-      <div className="flex flex-col md:flex-row items-start md:items-center">
-        <div className="md:w-1/2 mx-16 ">
-          <p className="text-xl md:text-3xl text-primary-darkgreen">Research Subjects</p>
-          <ol className="text-sm md:text-base mt-5 font-light list-decimal">
+      <div className="flex flex-col md:flex-row mt-28 items-center md:items-start justify-center md:justify-start bg-primary-lightgreen p-20">
+        <div className="md:w-1/2 2xl:w-1/2 mx-auto 2xl:mr-40">
+          <p className="text-base md:text-2xl 2xl:text-3xl items-center font-bold text-primary-darkgreen">Research Subjects</p>
+          <ul className="list-disc 2xl:text-xl text-sm md:text-base mt-5 font-normal">
             <li>Groundwater Ecohydrology</li>
             <li>Hydro-geological Engineering</li>
             <li>Watershed Management</li>
@@ -55,11 +53,11 @@ const Research = () => {
             <li>Water Resources Engineering</li>
             <li>Statistical Machine Learning</li>
             <li>Functional Data Analysis</li>
-          </ol>
+          </ul>
         </div>
-        <div className="md:w-1/2 ml-16 mt-10 md:mt-0 ">
-          <p className="text-xl md:text-3xl text-primary-darkgreen">NSERC subjects</p>
-          <ol className="text-sm md:text-base mt-5 font-light list-decimal">
+        <div className="md:w-1/2 md:ml-16 mt-10 md:mt-0 md:ml-0 xl:ml-10 2xl:ml-0">
+          <p className="text-base md:text-2xl 2xl:text-3xl items-center font-bold text-primary-darkgreen">NSERC subjects</p>
+          <ol className="list-disc 2xl:text-xl text-sm md:text-base mt-5 font-normal">
             <li>4504 Groundwater</li>
             <li>1007 Water Resources and Supply</li>
             <li>1501 Water Quality</li>
@@ -69,21 +67,22 @@ const Research = () => {
           </ol>
         </div>
       </div>
-      <div className="md:my-20 mx-10 mt-10 md:mt-0 md:mx-36">
-        <ResearchCard heading="Where does the water go after it rains?" 
-          text= "HG-WM research group focuses on developing new hydrologic transport models to identify source, pathway and residence time of water within watersheds. These models set a fundamental foundation for understanding the interaction between hydrological, geochemical and ecological processes. Check out related papers." 
+
+      <div className="md:my-20 mx-10 mt-10 md:mt-0 md:ml-36">
+        <ResearchCard heading="I. Where does the water go after it rains?" 
+          text= "We develop new physics-informed statistical machine-learning models to learn and identify the sources, pathways, hot spots, hot moments, and residence times of water (and solutes) within watersheds. These inferential models set a fundamental foundation for understanding the interaction between hydrological, geochemical, and ecological processes." 
           imageSrc="/assets/research1.jpg"
         />
-        <ResearchCard heading="How does chemistry of rainwater alter on its way from being rainfall to being streamflow?" 
-          text= "The extent to which chemistry of water particles alter along their way from land surface to stream depends on their pathways and the time they were in direct contact with solute sources within the watershed. HG-WM research group combines new hydrologic transport models (developed in research area I) with geochemical algorithms to explore how chemistry of rainwater alter before being discharged into stream. Check out related papers."
+        <ResearchCard heading="II. How does chemistry of rainwater alter on its way from being rainfall to being streamflow?" 
+          text= "The extent to which the chemistry of water particles alters along their way from land surface to stream depends on their pathways and the time they were in direct contact with solute sources within the watershed. Our laboratory combines new hydrologic transport models (developed in research area I) with geochemical algorithms to explore how rainwater chemistry alters before being discharged into the stream."
           imageSrc="/assets/research2.png"
         />
-        <ResearchCard heading="How do forests and agricultural developments impact water pathways and ultimately stream water quality and quantity?" 
-          text= "Forest and agricultural land developments may alter the timing and pathways of water transport, and ultimately may alter hydro-geochemical processes within watershed and stream water quality and quantity. Climate variability may also exacerbate the impacts of forest and agricultural land developments on stream water quality and quantity. HG-WM research group extends new hydrologic transport and hydrogeochemical models (developed in research areas I & II) to explore these impacts. Check out related papers."
+        <ResearchCard heading="III. How do forests and agricultural developments impact water pathways and ultimately stream water quality and quantity?" 
+          text= "Forest, mining, and agricultural land developments may alter the timing and pathways of water transport and ultimately may impact stream water quality and quantity. Climate variability may exacerbate such impacts. Our laboratory explores the cumulative effects of watershed management practices and climate variability on water pathways and ultimately on stream water quantity and quality. "
           imageSrc="/assets/research3.jpeg"
         />
-        <ResearchCard heading="Where are suitable locations for forestry and agricultural land developments with minimal impact on water quality and quantity, under changing cliimate?" 
-          text= "Research areas I & II & III inform watershed management decisions on locating areas where intensive agricultural and forestry practices can lead to negative environmental impacts on stream water quality & quantity. HG-WM research group develops hydro-geochemical mapping tools to identify areas sensitive to forestry and agricultural practices as well as climate variability at local to regional scales."
+        <ResearchCard heading="IV. Where are suitable locations for forestry and agricultural land developments with minimal impact on water quality and quantity, under changing cliimate?" 
+          text= "Research areas I & II & III inform watershed management decision makings on locating areas where intensive agricultural, mining, and forestry practices can lead to negative environmental impacts on stream water quality & quantity. Our laboratory develops science-based decision-making tools to identify areas vulnerable to (or suitable for) watershed management practices."
           imageSrc="/assets/research4.jpeg"
         />
       </div>

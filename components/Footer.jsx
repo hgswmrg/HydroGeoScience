@@ -1,21 +1,32 @@
 import Image from 'next/legacy/image';
 import Link from 'next/link';
-import {  FaTwitter,} from 'react-icons/fa';
+import {  FaTwitter, } from 'react-icons/fa';
+import {AiFillGithub} from 'react-icons/ai';
 
 
 const Footer = () => {
   return (
     <div className="flex bg-gray-200">
       <div className="w-full m-auto flex justify-between items-center mr-10">
-        <div className="flex relative ml-2 md:ml-12">
+        <div className="flex ml-2 md:ml-12">
           <Link  href="/">
-            <Image src="/assets/logoimg.png" width={100} height={100} alt="Card Image"   />
+            <Image src="/assets/footer.png" width={160} height={100} alt="Card Image"   />
           </Link>
-          <p className='py-12 font-semibold text-yellow-950 hidden sm:block'>HydroGeoScienceForWatershedManagement</p>
+          <div className="flex items-center flex-col  py-6 font-medium hidden sm:block">
+            <p>HydroGeoScience For Watershed Management</p>
+            <p>The University of British Columbia (Vancouver Campus)</p>
+          </div>
+          
         </div>
-            <Link  href="https://twitter.com/a_ameli2">
-              <FaTwitter size={30} color="black"/>
-            </Link>
+        <div className="flex ">
+          <Link href="" className='mr-10 transform hover:scale-110 duration-500'>
+            <AiFillGithub size={30} color="black"/>
+          </Link>
+          <Link  classname="transform hover:scale-110 duration-500" href="https://twitter.com/a_ameli2">
+            <FaTwitter size={30} color="black"/>
+          </Link>
+        </div>
+            
          
       </div>
     </div>

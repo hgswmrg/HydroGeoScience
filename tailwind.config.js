@@ -13,7 +13,7 @@ module.exports = {
       },
       colors: {
         'primary-darkgreen': '#064636',
-        'primary-lightgreen': '#F7F9E8',
+        'primary-lightgreen': '#F4F6F4',
         'primary-darkblue': '#03045e',
       }
     },

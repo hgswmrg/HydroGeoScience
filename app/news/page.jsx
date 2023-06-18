@@ -10,8 +10,8 @@ export default async function News() {
   
 
   return (
-    <section className="w-full flex flex-col items-start mx-auto md:px-20 mb-20">
-      <div className="mt-20 md:mt-40 w-full h-full flex flex-col p-5">
+    <section className="w-full h-screen flex flex-col items-start mx-auto md:px-20 mb-20">
+      <div className="mt-20 md:mt-40 w-full flex flex-col p-5">
         <p className="font-bold text-2xl md:text-5xl mb-5 text-primary-darkgreen">
           Latest News
         </p>
@@ -20,9 +20,9 @@ export default async function News() {
       <div className="flex md:mt-10 w-full  flex-col items-start">
           {newsData.map((newsItem, index) => (
             <div key={index} className="news-card bg-primary-lightgreen w-full m-4 p-5">
-              <h2 className="text-base md:text-xl font-bold">{newsItem.title}</h2>
-              <p className="text-sm md:text-base">{newsItem.description}</p>
-              <Link href="" className="text-primary-darkgreen">
+              <h2 className="text-base md:text-xl font-bold 2xl:text-3xl">{newsItem.title}</h2>
+              <p className="text-sm md:text-base 2xl:text-2xl text-gray-900 my-1 font-normal">{newsItem.description}</p>
+              <Link href="" className="text-primary-darkgreen 2xl:text-2xl underline">
                 Read More
               </Link>
             </div>

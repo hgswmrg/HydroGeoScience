@@ -6,7 +6,8 @@ import Link from "next/link";
 import Image from "next/legacy/image";
 
 
-import { FaGraduationCap, FaOrcid} from 'react-icons/fa';
+import { FaGraduationCap, FaOrcid, FaLink} from 'react-icons/fa';
+import {RiExternalLinkLine} from 'react-icons/ri';
 
 import { getPublications } from "@backend/sanity-utils";
 import YearCard from "@components/YearCard";
@@ -32,15 +33,16 @@ export default async function Publications () {
           <Image
             src="/assets/publications.jpg"
             alt="Publications Image"
-            height={500}
-            width={2000}
+            height={700}
+            width={3000}
             objectFit="cover"
             objectPosition="center"
+            layout="responsive"
           />
         
       </div>
       <div className="absolute top-0 mt-12 md:mt-60 w-full h-400 flex flex-col items-center">
-        <p className="font-bold text-xl md:text-5xl mb-5 text-white">
+        <p className="font-bold text-xl md:text-5xl xl:text-6xl 2xl:text-9xl 2xl:pt-10 mb-5 text-white">
           Publications
         </p>
       </div>
@@ -68,12 +70,17 @@ export default async function Publications () {
       
         
         <div className="water-publications flex flex-col justify-center  px-4 md:px-20 pt-4 md:pt-10">
-          <p className="text-lg md:text-2xl font-semibold text-primary-darkgreen">Where does the water go after it rains?</p>
-            <ol className="text-sm md:text-base font-normal  mt-5 p-4  list-decimal">
+          <p className="text-lg md:text-2xl 2xl:text-4xl font-semibold text-primary-darkgreen">Where does the water go after it rains?</p>
+            <ol className="text-sm md:text-base  2xl:text-2xl 2xl:tracking-wide font-medium   mt-5 p-4  list-decimal">
               {filteredPublicationsData('water').map((item, index) => (
                 <Link href={item.link} key={index}>
-                    <li>
-                    {item.title}
+                    <li className='mb-2'>
+                      <div className="flex">
+                        <p className='mr-5'>{item.title } </p>
+                            <div className="transform hover:scale-110 duration-500">
+                            <RiExternalLinkLine classname="" size={20} color="#0072b1"/> 
+                          </div>
+                        </div>
                     </li>
                 </Link>
                 ))} 
@@ -81,25 +88,35 @@ export default async function Publications () {
         </div>
 
         <div className="chemistry-publications flex flex-col justify-center  px-4 md:px-20 pt-4 md:pt-10">
-          <p className="text-lg md:text-2xl font-semibold text-primary-darkgreen">How does chemistry of rainwater alter on its way from being rainfall to being streamflow?</p>
-            <ol className="text-sm md:text-base font-normal  mt-5 p-4  list-decimal">
+          <p className="text-lg md:text-2xl 2xl:text-4xl font-semibold text-primary-darkgreen">How does chemistry of rainwater alter on its way from being rainfall to being streamflow?</p>
+            <ol className="text-sm md:text-base  2xl:text-2xl 2xl:tracking-wide font-medium   mt-5 p-4  list-decimal">
               {filteredPublicationsData('chemistry').map((item, index) => (
                 <Link href={item.link} key={index}>
-                    <li>
-                    {item.title}
-                    </li>
-                </Link>
+                <li className='mb-2'>
+                  <div className="flex">
+                    <p className='mr-5'>{item.title } </p>
+                      <div className="transform hover:scale-110 duration-500">
+                        <RiExternalLinkLine classname="" size={20} color="#0072b1"/> 
+                      </div>
+                    </div>
+                </li>
+            </Link>
                 ))} 
             </ol>
         </div>
 
         <div className="forest-publications flex flex-col justify-center  px-4 md:px-20 pt-4 md:pt-10">
-          <p className="text-lg md:text-2xl font-semibold text-primary-darkgreen">How do forests and agricultural developments impact water pathways and ultimately stream water quality and quantity?</p>
-            <ol className="text-sm md:text-basefont-normal  mt-5 p-4  list-decimal">
+          <p className="text-lg md:text-2xl 2xl:text-4xl font-semibold text-primary-darkgreen">How do forests and agricultural developments impact water pathways and ultimately stream water quality and quantity?</p>
+            <ol className="text-sm md:text-base  2xl:text-2xl 2xl:tracking-wide font-medium   mt-5 p-4  list-decimal">
               {filteredPublicationsData('forest').map((item, index) => (
                 <Link href={item.link} key={index}>
-                    <li>
-                    {item.title}
+                    <li className='mb-2' >
+                      <div className="flex">
+                        <p className='mr-5'>{item.title } </p>
+                          <div className="transform hover:scale-110 duration-500">
+                            <RiExternalLinkLine classname="" size={20} color="#0072b1"/> 
+                        </div>
+                        </div>
                     </li>
                 </Link>
                 ))} 

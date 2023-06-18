@@ -24,37 +24,37 @@ export default async function Team () {
           className="h-600"
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <p className="font-bold text-5xl mb-5 text-white">
+          <p className="font-bold text-5xl 2xl:text-7xl mb-5 text-white">
             Meet the Team
           </p>
         </div>
       </div>
       <div className="mx-20">
-        <p className="mt-36 font-bold text-3xl text-primary-darkgreen">Lab Management</p>
+        <p className="mt-36 font-bold text-3xl 2xl:text-6xl text-primary-darkgreen">Lab Management</p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />
         {filteredProfileData('director').map((profileItem) => (
           <TeamCard name={profileItem.name} imagesrc={profileItem.image} bio={profileItem.description} position={profileItem.position}/>
           
         ))}
-        <p className="mt-24 font-bold text-3xl text-primary-darkgreen">Affiliated Researchers</p>
+        <p className="mt-24 font-bold text-3xl 2xl:text-6xl  text-primary-darkgreen">Affiliated Researchers</p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />
         {filteredProfileData('affiliated').map((profileItem) => (
           <TeamCard link={profileItem.link} name={profileItem.name} imagesrc={profileItem.image} bio={profileItem.description} position={profileItem.position}/>
           
         ))}
-        <p className="mt-24 font-bold text-3xl text-primary-darkgreen">Graduate Students</p>
+        <p className="mt-24 font-bold text-3xl 2xl:text-6xl  text-primary-darkgreen">Graduate Students</p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />
         {filteredProfileData('graduate').map((profileItem) => (
           <TeamCard link={profileItem.linkedIn} name={profileItem.name} imagesrc={profileItem.image} bio={profileItem.description} position={profileItem.position}/>
           
         ))}
-        <p className="mt-24 font-bold text-3xl text-primary-darkgreen">Undergraduate Students</p>
+        <p className="mt-24 font-bold text-3xl 2xl:text-6xl  text-primary-darkgreen">Undergraduate Students</p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />
         {filteredProfileData('undergraduate').map((profileItem) => (
           <TeamCard link={profileItem.link} name={profileItem.name} imagesrc={profileItem.image} bio={profileItem.description} position={profileItem.position}/>
           
         ))}
-        <p className="mt-24 font-bold text-3xl text-primary-darkgreen">Lab Alumni</p>
+        <p className="mt-24 font-bold text-3xl 2xl:text-6xl  text-primary-darkgreen">Lab Alumni</p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />
         {filteredProfileData('alumni').map((profileItem) => (
           <TeamCard link={profileItem.link} name={profileItem.name} imagesrc={profileItem.image} bio={profileItem.description} position={profileItem.position}/>
