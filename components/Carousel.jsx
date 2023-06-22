@@ -72,15 +72,17 @@ const CarouselWithText = ({ data }) => {
         style={{ height: "600px" }}
       >
         <div className="relative w-screen h-500">
+          <Link href="/research">
           <Image
-            src="/assets/Front.jpeg"
+            src="/assets/landingpage.jpeg"
             alt="Landing Page Image"
             width={1500}
             height={600}
-            objectFit="cover"
+           
             layout="responsive"
-            sizes="(max-width: 2000px) 100vw, (max-height: 600px) 100vw"
+            
           />
+          </Link>
         </div>
 
         {carouselData.map((item, index) => (
