@@ -16,6 +16,11 @@ export default {
         type: 'text',
       },
       {
+        name: 'longdescription',
+        title: 'longDescription',
+        type: 'text',
+      },
+      {
         name: 'link',
         title: 'Link',
         type: 'url',
