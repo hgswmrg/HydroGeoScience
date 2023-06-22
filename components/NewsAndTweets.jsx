@@ -24,6 +24,11 @@ export default async function NewsAndTweets() {
             heading={newsData[1].title}
             link="/news"
           />
+          <News
+            text={newsData[2].text}
+            heading={newsData[2].title}
+            link="/news"
+          />
           <div className="">
             <Link href="/news">
               <button className="hover:scale-105 transition duration-300 font-semibold text-base 2xl:text-2xl py-2 mt-4 ml-0 text-primary-darkgreen bg-white rounded-lg flex items-center">
@@ -39,7 +44,7 @@ export default async function NewsAndTweets() {
           <TwitterTimelineEmbed
             sourceType="profile"
             screenName="a_ameli2" // Replace 'example' with your Twitter handle
-            options={{ height: 400 }} // Adjust the height as per your preference
+            options={{ height: 600 }} // Adjust the height as per your preference
           />
         </div>
 
