@@ -73,7 +73,7 @@ const CarouselWithText = ({ data }) => {
       >
         <div className="relative w-screen h-500">
           <Image
-            src="/assets/FrontPageImg.jpeg"
+            src="/assets/Front.jpeg"
             alt="Landing Page Image"
             width={1500}
             height={600}
@@ -85,7 +85,7 @@ const CarouselWithText = ({ data }) => {
 
         {carouselData.map((item, index) => (
           <div key={index} className="relative w-screen h-500">
-            <Link href="/team">
+            <Link href="/team/graduates">
               <Image
                 src={item.image}
                 alt="Landing Page Image"

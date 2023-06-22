@@ -19,7 +19,7 @@ const Footer = () => {
           
         </div>
         <div className="flex ">
-          <Link href="" className='mr-10 transform hover:scale-110 duration-500'>
+          <Link href="githttps://github.com/hgwm" className='mr-10 transform hover:scale-110 duration-500'>
             <AiFillGithub size={30} color="black"/>
           </Link>
           <Link  classname="transform hover:scale-110 duration-500" href="https://twitter.com/a_ameli2">

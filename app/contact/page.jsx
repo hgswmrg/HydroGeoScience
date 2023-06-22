@@ -1,8 +1,9 @@
 "use client"
 
 import React, { useState } from "react";
-import axios from "axios";
 import Image from "next/image";
+import qs from "qs";
+const axios = require('axios')
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -13,20 +14,76 @@ const ContactForm = () => {
     file: null,
   });
 
-  const handleChange = () => {
-    
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
   };
 
-  const handleFileChange = () => {
-    
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      file: file,
+    }));
   };
 
-  const handleSubmit = () => {}
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    const message = {
+      to: 'recipient@gmail.com', // Replace with the recipient's email address
+      subject: 'New Contact Form Submission',
+      body: `
+        First Name: ${formData.firstName}
+        Last Name: ${formData.lastName}
+        Email: ${formData.email}
+        Question: ${formData.question}
+      `,
+    };
+  
+    try {
+      const accessToken = 'YOUR_ACCESS_TOKEN'; // Replace with your access token
+      const response = await fetch('https://www.googleapis.com/gmail/v1/users/{userEmail}/messages/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({
+          raw: btoa(JSON.stringify(message)),
+        }),
+      });
+  
+      if (response.ok) {
+        console.log('Email sent successfully!');
+        alert('Email sent successfully!');
+        // Reset the form data
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          question: '',
+          file: null,
+        });
+      } else {
+        console.error('Error sending email:', response.status);
+        alert('An error occurred while sending the email.');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('An error occurred while sending the email.');
+    }
+  };
+  
+ 
   
   
   
   return (
-    <div className="flex flex-col  h-screen ">
+    <div className="flex flex-col  mb-60">
       <div className="mt-40 ml-40">
         <p className="text-base md:text-lg 2xl:text-3xl text-primary-darkgreen font-bold ">Address</p>
         <p className="text-base md:text-lg 2xl:text-3xl  ">Department of Earth,Ocean and Atmospheric Sciences</p>
@@ -114,9 +171,10 @@ const ContactForm = () => {
               onChange={handleFileChange}
             />
           </div>
-          <button
+          <button 
+            onClick={handleSubmit}
             type="submit"
-            className="w-full px-4 py-2 text-white bg-primary-darkgreen rounded hover:bg-primary-green"
+            className="bg-primary-darkgreen rounded "
           >
             Submit
           </button>
