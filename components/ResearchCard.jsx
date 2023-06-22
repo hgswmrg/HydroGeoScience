@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const ResearchCard = ({ imageSrc, heading, text }) => {
   return (
-    <div className="flex flex-col md:flex-row mb-10 md:mb-0 ">
+    <div className="flex flex-col md:flex-row mb-10  ">
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start">
-        <p className="text-sm md:text-2xl font-semibold text-primary-darkgreen 2xl:text-5xl 2xl:mb-20">{heading}</p>
+        <p className="text-sm md:text-2xl font-semibold text-primary-darkgreen 2xl:text-4xl 2xl:mb-12">{heading}</p>
         <Link href="/publications">
           <p className="text-sm mt-5 font-normal 2xl:text-4xl text-gray-700">{text}</p>
         </Link>
