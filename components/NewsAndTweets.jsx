@@ -12,8 +12,10 @@ export default async function NewsAndTweets() {
   return (
     <div className="flex flex-col md:flex-row items-center">
       <div className="w-1/2 flex flex-col justify-center m-20 2xl:m-24 hidden sm:block">
+      
+      <p className="ext-xl md:text-3xl 2xl:text-5xl mb-2 text-primary-darkgreen 2xl:mb-7">News</p>
         <div className="pt-6 py-16">
-          <p className="ext-xl md:text-3xl 2xl:text-5xl mb-2 text-primary-darkgreen 2xl:mb-10">News</p>
+          
           <News
             text={newsData[0].text}
             heading={newsData[0].title}
@@ -43,8 +45,13 @@ export default async function NewsAndTweets() {
         <div className="tweets">
           <TwitterTimelineEmbed
             sourceType="profile"
-            screenName="a_ameli2" // Replace 'example' with your Twitter handle
-            options={{ height: 600 }} // Adjust the height as per your preference
+            screenName="a_ameli2" 
+            options={{ 
+              height: '450px',
+              'lg': { height: '500px' },
+              'xl': { height: '600px' },
+             
+            }} 
           />
         </div>
 
