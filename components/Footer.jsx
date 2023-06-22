@@ -13,13 +13,13 @@ const Footer = () => {
             <Image src="/assets/footer.png" width={160} height={100} alt="Card Image"   />
           </Link>
           <div className="flex items-center flex-col  py-6 font-medium hidden sm:block">
-            <p>HydroGeoScience For Watershed Management</p>
+            <p>HydroGeoScience For Watershed Management Laboratory</p>
             <p>The University of British Columbia (Vancouver Campus)</p>
           </div>
           
         </div>
         <div className="flex ">
-          <Link href="githttps://github.com/hgwm" className='mr-10 transform hover:scale-110 duration-500'>
+          <Link href="https://github.com/hgwm" className='mr-10 transform hover:scale-110 duration-500'>
             <AiFillGithub size={30} color="black"/>
           </Link>
           <Link  classname="transform hover:scale-110 duration-500" href="https://twitter.com/a_ameli2">
