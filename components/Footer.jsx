@@ -12,11 +12,10 @@ const Footer = () => {
           <Link  href="/">
             <Image src="/assets/footer.png" width={160} height={100} alt="Card Image"   />
           </Link>
-          <div className="flex items-center flex-col  py-6 font-medium hidden sm:block">
+          <div className="flex items-center justify-center flex-col py-6 font-medium hidden sm:block text-center">
             <p>HydroGeoScience For Watershed Management Laboratory</p>
             <p>The University of British Columbia (Vancouver Campus)</p>
           </div>
-          
         </div>
         <div className="flex ">
           <Link href="https://github.com/hgwm" className='mr-10 transform hover:scale-110 duration-500'>

@@ -1,9 +1,8 @@
 "use client"
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
-import qs from "qs";
-const axios = require('axios')
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +12,8 @@ const ContactForm = () => {
     question: "",
     file: null,
   });
+
+  const form = useRef();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,9 +31,9 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-  
+    
     const message = {
       to: 'recipient@gmail.com', // Replace with the recipient's email address
       subject: 'New Contact Form Submission',
@@ -43,39 +44,17 @@ const ContactForm = () => {
         Question: ${formData.question}
       `,
     };
-  
-    try {
-      const accessToken = 'YOUR_ACCESS_TOKEN'; // Replace with your access token
-      const response = await fetch('https://www.googleapis.com/gmail/v1/users/{userEmail}/messages/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${accessToken}`,
-        },
-        body: JSON.stringify({
-          raw: btoa(JSON.stringify(message)),
-        }),
-      });
-  
-      if (response.ok) {
-        console.log('Email sent successfully!');
-        alert('Email sent successfully!');
-        // Reset the form data
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          question: '',
-          file: null,
-        });
-      } else {
-        console.error('Error sending email:', response.status);
+    
+    emailjs
+      .sendForm('service_1h21uwa', 'template_dim274n', form.current , 'ATMJnhxW02CoHUGcy')
+      .then((result) => {
+        console.log(result.text);
+        alert('Query sent successfully!');
+      })
+      .catch((error) => {
+        console.log(error.text);
         alert('An error occurred while sending the email.');
-      }
-    } catch (error) {
-      console.error('Error sending email:', error);
-      alert('An error occurred while sending the email.');
-    }
+      });
   };
   
  
@@ -83,22 +62,27 @@ const ContactForm = () => {
   
   
   return (
-    <div className="flex flex-col  mb-60">
-      <div className="mt-40 ml-40">
-        <p className="text-base md:text-lg 2xl:text-3xl text-primary-darkgreen font-bold ">Address</p>
-        <p className="text-base md:text-lg 2xl:text-3xl  ">Department of Earth,Ocean and Atmospheric Sciences</p>
-        <p className="text-base md:text-lg 2xl:text-3xl  ">The University of British Columbia</p>
-        <p className="text-base md:text-lg 2xl:text-3xl  ">Earth Sciences Building (ESB)</p>
-        <p className="text-base md:text-lg 2xl:text-3xl  ">2020 - 2027 Main Mall</p>
-        <p className="text-base md:text-lg 2xl:text-3xl  ">Vancouver British Columbia V6T 1Z4</p>
-        <p className="text-base md:text-lg 2xl:text-3xl  ">Canada</p>
-        
-      </div>
-      <div className="flex items-center ">
-          <div className="w-1/3 mx-32  hidden sm:block">
-          <Image className="" src="/assets/logoimg.png" width={30} height={50} alt="Card Image" layout="responsive" />
+    <div className="flex flex-col mb-60">
+      
+      <div className="flex flex-col md:flex-row items-center justify-center ">
+        <div className="flex-col w-full md:w-1/3 mt-20 2xl:mt-60">
+          <div className=" hidden sm:block">
+            <p className="flex text-center text-base items-center md:text-2xl 2xl:text-5xl text-primary-darkgreen font-bold mr-20">HydroGeoScience for Watershed Management Laboratory</p>
+            <Image className="" src="/assets/footer.png" width={30} height={50} alt="Card Image" layout="responsive" />
           </div>
-        <form className="w-full p-10  md:w-1/2 md:my-24 mt-10 " onSubmit={handleSubmit}>
+          <div className="w-full mt-10 mx-5 md:mx-0 ">
+            <p className="text-base md:text-lg 2xl:text-3xl text-primary-darkgreen font-semibold mt-10">Address</p>
+            <p className="text-base md:text-lg 2xl:text-3xl  ">Department of Earth,Ocean and Atmospheric Sciences</p>
+            <p className="text-base md:text-lg 2xl:text-3xl  ">The University of British Columbia</p>
+            <p className="text-base md:text-lg 2xl:text-3xl  ">Earth Sciences Building (ESB)</p>
+            <p className="text-base md:text-lg 2xl:text-3xl  ">2020 - 2027 Main Mall</p>
+            <p className="text-base md:text-lg 2xl:text-3xl  ">Vancouver British Columbia V6T 1Z4</p>
+            <p className="text-base md:text-lg 2xl:text-3xl  ">Canada</p>
+            
+          </div>
+        </div>
+         
+        <form ref={form} className="md:p-10  md:w-1/2 md:my-24 mt-10 mx-5 md:ml-10 " onSubmit={handleSubmit}>
             <div className="my-10">
                 <p className="text-4xl 2xl:text-6xl font-bold pb-2 text-primary-darkgreen">Contact Us</p>
             </div>
@@ -159,26 +143,17 @@ const ContactForm = () => {
               required
             ></textarea>
           </div>
-          <div className="mb-4 2xl:text-2xl">
-            <label htmlFor="file" className="block mb-1 font-medium">
-              Upload File
-            </label>
-            <input
-              type="file"
-              id="file"
-              name="file"
-              className="w-full"
-              onChange={handleFileChange}
-            />
-          </div>
+          
           <button 
-            onClick={handleSubmit}
+            
             type="submit"
-            className="bg-primary-darkgreen rounded "
+            className="bg-primary-darkgreen text-white p-2 rounded "
           >
             Submit
           </button>
+
         </form>
+        
       </div>
     </div>
   );

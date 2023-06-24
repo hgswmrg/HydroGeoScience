@@ -5,18 +5,16 @@ import JobsCard from '@components/JobsCard';
 
 export default async function Jobs () {
   const jobsData = await getJobs();
-  const textforgroup = "UBC's HydroGeoscience for Watershed Management (HG-WM) research group combines different environmental and statistical science disciplines in order to scientifically manage the environmental impacts of climate and land-use changes. In particular, HG-WM (1) advances the knowledge on materiel (water & solute) transport below and above the land surface, to (2) inform science-based watershed management strategies and land-use planing, and to (3) design engineered groundwater and surface water protection and purification systems. For the details of our current projects, please see the research section. The research group members receive full support from HG-WM director to obtain high-level professional development and to achieve their career goals and dreams. Our group members have already received prestigious scholarships and fellowships. In addition, our group alumnus have already landed high-level jobs in environmental and statistical agencies, or continued their graduate studies in top-ranked Universities.";
-
-
+  const textforgroup = "The laboratory members advance the knowledge on material (water & solute) transport in deep and shallow earth’s compartments to inform science-based watershed management strategies. They also develop new physics-informed statistical machine-learning models to infer relevant patterns and processes from big data.  The research group members receive full support to obtain high-level professional development and to achieve their career goals and dreams. Our group members have already received prestigious scholarships and fellowships. In addition, our group alumni have already landed high-level jobs in environmental and statistical agencies or continued their graduate studies in top-ranked Universities.";
   const filteredJobsData = (classification) => {
     return jobsData.filter((jobsItem) => jobsItem.profileType === classification);
   };
 
   return (
-    <section className="w-full flex flex-col items-start px-5 md:px-20 mb-20">
-      <div className="mt-20 md:mt-32 w-full h-full flex flex-col md:p-5">
+    <section className="w-full h-screen flex flex-col items-start px-5 md:px-20 mb-40">
+      <div className="mt-20 md:mt-32 w-full flex flex-col md:p-5">
         <p className="font-bold text-2xl md:text-5xl text-primary-darkgreen 2xl:mb-5">
-          Opportunities at our Lab
+          Opportunities at our Laboratory
         </p>
         <p className="font-normal text-sm md:text-base mt-5 text-black 2xl:text-2xl 2xl:mb-10">
           {textforgroup}

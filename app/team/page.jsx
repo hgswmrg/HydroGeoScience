@@ -30,7 +30,7 @@ export default async function Team () {
         </div>
       </div>
       <div className="mx-20">
-        <p className="mt-36 font-bold text-3xl 2xl:text-6xl text-primary-darkgreen">Lab Management</p>
+        <p className="mt-36 font-bold text-3xl  2xl:text-6xl text-primary-darkgreen">Lab Management</p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />
         {filteredProfileData('director').map((profileItem) => (
           <TeamCard name={profileItem.name} imagesrc={profileItem.image} bio={profileItem.description} position={profileItem.position}/>
