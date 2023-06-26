@@ -147,7 +147,7 @@ const ContactForm = () => {
           <button 
             
             type="submit"
-            className=" text-primary-darkgreen font-bold transform hover:scale-110 duration-500 p-2 rounded "
+            className=" text-primary-darkgreen font-bold border border-color-primary-darkgreen transform hover:scale-110 duration-500 p-2 rounded "
           >
             Submit
           </button>
