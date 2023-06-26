@@ -62,7 +62,7 @@ const ContactForm = () => {
   
   
   return (
-    <div className="flex flex-col mb-60">
+    <div className="flex h-screen flex-col mb-60">
       
       <div className="flex flex-col md:flex-row items-center justify-center ">
         <div className="flex-col w-full md:w-1/3 mt-20 2xl:mt-60">
