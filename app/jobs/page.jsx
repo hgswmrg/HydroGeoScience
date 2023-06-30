@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { getJobs } from '@backend/sanity-utils';
 import JobsCard from '@components/JobsCard';
 
@@ -9,9 +8,10 @@ export default async function Jobs () {
   const filteredJobsData = (classification) => {
     return jobsData.filter((jobsItem) => jobsItem.profileType === classification);
   };
+  
 
   return (
-    <section className="w-full h-screen flex flex-col items-start px-5 md:px-20 mb-40">
+    <section className="w-full h-full h-screen flex flex-col items-start px-5 md:px-20 mb-80">
       <div className="mt-20 md:mt-32 w-full flex flex-col md:p-5">
         <p className="font-bold text-2xl md:text-5xl text-primary-darkgreen 2xl:mb-5">
           Opportunities at our Laboratory
