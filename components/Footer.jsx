@@ -6,7 +6,7 @@ import {AiFillGithub} from 'react-icons/ai';
 
 const Footer = () => {
   return (
-    <div className="flex bg-gray-200 mt-80">
+    <div className="flex bg-gray-200 ">
       <div className="w-full m-auto flex justify-between items-center mr-10">
         <div className="flex ml-2 md:ml-12">
           <Link  href="/">

@@ -11,7 +11,7 @@ export default async function Jobs () {
   
 
   return (
-    <section className="w-full h-full h-screen flex flex-col items-start px-5 md:px-20 mb-80">
+    <section className="w-full h-full  flex flex-col items-start px-5 md:px-20 mb-80">
       <div className="mt-20 md:mt-32 w-full flex flex-col md:p-5">
         <p className="font-bold text-2xl md:text-5xl text-primary-darkgreen 2xl:mb-5">
           Opportunities at our Laboratory
@@ -59,7 +59,7 @@ export default async function Jobs () {
         </p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />
       </div>
-      <div className="flex mt-5 w-full flex-col items-start">
+      <div className="flex mt-5 w-full flex-col items-start ">
         {filteredJobsData('research-assistant').map((jobsItem) => (
           <JobsCard jobsItem={jobsItem}/>
         ))}
