@@ -10,7 +10,6 @@ const Research = () => {
           Towards Science-Based Watershed Management with Minimal Environmental Impacts
         </p>
       <div className="relative mt-20 w-screen h-400">
-        
         <Image
           src="/assets/Research_Photo4.jpeg"
           alt="Publications Image"
