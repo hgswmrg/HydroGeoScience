@@ -28,7 +28,7 @@ export default function News() {
   };
 
   return (
-    <section className="w-full h-screen flex flex-col items-start mx-auto md:px-20 mb-20">
+    <section className="w-full h-full flex flex-col items-start mx-auto md:px-20 mb-20">
       <div className="mt-20 md:mt-40 w-full flex flex-col p-5">
         <p className="font-bold text-2xl md:text-5xl mb-5 text-primary-darkgreen">
           Latest News

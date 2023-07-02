@@ -11,7 +11,7 @@ const ResearchTopicCard = ({text, imageSrc}) => {
                 alt="Card Image" 
                 sizes="(max-width: 200px) 100vw,
                         (max-height: 200px) 100vw" />
-                <p className='flex justify-center 2xl:text-2xl text-center items-center mx-auto text-base font-semibold mt-2 text-primary-darkblue md:mb-10'>{text}</p>
+                <p className='flex justify-center 2xl:text-2xl text-center items-center mx-auto text-base font-semibold mt-2 text-primary-darkblue mb-10'>{text}</p>
             </div>
             
         </Link>

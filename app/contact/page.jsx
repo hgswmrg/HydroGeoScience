@@ -62,9 +62,9 @@ const ContactForm = () => {
   
   
   return (
-    <div className="flex h-screen flex-col mb-60">
+    <div className="flex h-full flex-col mb-20">
       
-      <div className="flex flex-col md:flex-row items-center justify-center ">
+      <div className="flex flex-col md:flex-row md:items-center justify-center ">
         <div className="flex-col w-full md:w-1/3 mt-20 2xl:mt-60">
           <div className=" hidden sm:block">
             <p className="flex text-center text-base items-center md:text-2xl 2xl:text-5xl text-primary-darkgreen font-bold mr-20">HydroGeoScience for Watershed Management Laboratory</p>

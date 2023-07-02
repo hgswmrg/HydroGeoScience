@@ -6,10 +6,10 @@ import ResearchCard from '@components/ResearchCard';
 const Research = () => {
   return (
     <section className="w-full flex flex-col items-center">
-      <p className="flex mt-40 text-center font-bold text-sm  md:text-5xl 2xl:text-9xl 2xl:mx-60 mb-2 md:mb-5 text-primary-darkgreen">
+      <p className="flex mt-20 md:mt-40 text-center font-bold text-xl  md:text-5xl 2xl:text-9xl 2xl:mx-60 mb-2 md:mb-5 text-primary-darkgreen">
           Towards Science-Based Watershed Management with Minimal Environmental Impacts
         </p>
-      <div className="relative mt-20 w-screen h-400">
+      <div className="relative md:mt-20 w-screen h-400">
         <Image
           src="/assets/Research_Photo4.jpeg"
           alt="Publications Image"
@@ -23,18 +23,18 @@ const Research = () => {
       
     </div>
       
-      <div className="mt-20 md:mt-24 w-full h-full flex flex-col items-center ">
-        <div className="flex flex-col justify-center w-screen items-center 2xl:mt-24 px-20">
-            <p className="text-base md:text-2xl 2xl:text-6xl mb-10 items-center font-bold text-primary-darkgreen">
+      <div className="mt-10 md:mt-20 md:mt-24 w-full h-full flex flex-col items-center ">
+        <div className="flex flex-col justify-center w-screen items-center 2xl:mt-24 px-4 md:px-20">
+            <p className="text-base md:text-2xl 2xl:text-6xl mb-2 md:mb-10 items-center font-bold text-primary-darkgreen">
               What is the gap?
             </p>
-            <p className="text-center mx-20 2xl:text-3xl text-sm md:text-base mt-5 font-normal">
+            <p className="text-center md:mx-20 2xl:text-3xl text-sm md:text-base md:mt-5 font-normal">
               Watershed management practices have negatively impacted our environment. Stump harvesting forestry practice for biomass production in North Europe is hypothesized to enhance the excessive transport of solutes (e.g., methyl mercury). Wetland drainage in North America due to agricultural intensification is hypothesized to enhance the risks of lakes Eutrophication and the risks of drought/flood. These are two simple examples of watershed management planning with negative environmental impacts. So, how can we maximize forest biomass yield and agricultural productivity, while minimizing their environmental effects?  
             </p>
-            <p className="text-base md:text-2xl mb-10 mt-20 2xl:text-6xl items-center font-bold text-primary-darkgreen">
+            <p className="text-base md:text-2xl mb-2 md:mb-10 mt-20 2xl:text-6xl items-center font-bold text-primary-darkgreen">
               How do we fill the gap?
             </p>
-            <p className="text-center mx-20 2xl:text-3xl text-sm md:text-base mt-5 font-normal">
+            <p className="text-center md:mx-20 2xl:text-3xl text-sm md:text-base md:mt-5 font-norma">
               HydroGeoScience for Watershed Management Laboratory advances quantitative knowledge on material (water & solute) transport in deep and shallow earth’s compartments. We also explore how material transport processes vary with land developments and climate variability. This knowledge is critically required for science-based watershed management planning and, particularly, to locate areas where intensive watershed management practices can be conducted with minimal environmental impacts on local and regional ecosystems. In doing so, we develop new physics-informed statistical machine-learning models to learn and infer patterns and processes using big data.
             </p>
         </div>
