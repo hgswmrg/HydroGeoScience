@@ -8,7 +8,7 @@ const CardLeft = ({ imageSrc, heading, text }) => {
       </div>
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-5 md:items-start md:pr-12">
         <p className="text-xl md:text-3xl 2xl:text-5xl mb-2 text-primary-darkgreen">{heading}</p>
-        <p className="text-sm md:text-base 2xl:text-3xl mt-5 font-normal leading-8">{text}</p>
+        <p className="text-sm md:text-base 2xl:text-3xl md:mt-5 font-normal leading-8">{text}</p>
       </div>
     </div>
   );

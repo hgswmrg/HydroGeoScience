@@ -13,7 +13,7 @@ const RootLayout = ({children}) => {
   return (
     <html lang="en">
         <body>
-            <div className="flex flex-col h-screen w-screen">
+            <div className="flex flex-col h-full w-screen">
                 <Navbar/>
                 <main className=''>
                     {children}

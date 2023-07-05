@@ -67,6 +67,11 @@ const Research = () => {
         </div>
       </div>
 
+      <p className=" mt-10 md:mt-40 md:mb-20 text-lg md:text-4xl 2xl:text-7xl mb-2 xl:mb-10 items-center font-bold text-primary-darkgreen">
+        Our Ongoing Research Topics
+      </p>
+
+
       <div className="md:my-20 mx-10 mt-10 md:mt-0 md:ml-36">
         <ResearchCard heading="I. Where does the water go after it rains?" 
           text= "We develop new physics-informed statistical machine-learning models to learn and identify the sources, pathways, hot spots, hot moments, and residence times of water (and solutes) within watersheds. These inferential models set a fundamental foundation for understanding the interaction between hydrological, geochemical, and ecological processes." 

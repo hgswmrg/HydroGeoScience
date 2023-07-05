@@ -13,7 +13,7 @@ export default async function Affiliated () {
   };
 
   return (
-    <section className="w-full flex flex-col items-center md:items-start mb-20">
+    <section className="w-full h-full flex flex-col items-center md:items-start mb-20">
          <div className="relative w-full pb-96">
         <Image
           src="/assets/TeamImage.png"

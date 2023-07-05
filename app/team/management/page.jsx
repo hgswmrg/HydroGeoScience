@@ -13,7 +13,7 @@ export default async function Graduates () {
   };
 
   return (
-    <section className="w-full h-screen h-full flex flex-col items-center md:items-start mb-20">
+    <section className="w-full h-full 2xl:h-screen flex flex-col items-center md:items-start mb-20 ">
          <div className="relative w-full pb-96">
         <Image
           src="/assets/TeamImage.png"
@@ -29,7 +29,7 @@ export default async function Graduates () {
           </p>
         </div>
       </div>
-      <div className="mx-20">
+      <div className="mx-20 ">
         
         <p className="mt-24 font-bold text-3xl 2xl:text-6xl  text-primary-darkgreen">Lab Management</p>
         <hr className="mt-2 w-full h-0.5 bg-primary-darkblue" />

@@ -24,7 +24,7 @@ export default async function Home () {
 
  
   return (
-    <section className="w-full ">
+    <section className="w-full h-full">
         <div className="font-bold ">
           <CarouselWithText data={carouselData}/>
           <CardCenter heading="Motivation" text={text1} />
