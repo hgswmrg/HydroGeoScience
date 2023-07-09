@@ -6,7 +6,7 @@ const ResearchCard = ({ imageSrc, heading, text, num }) => {
     <div className="flex flex-col md:flex-row mb-10  ">
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start">
         <div className="flex text-sm md:text-2xl font-semibold text-primary-darkgreen 2xl:text-6xl 2xl:mb-6">
-          <p className="text-sm md:text-2xl font-semibold text-primary-darkgreen 2xl:text-6xl ">{heading}</p>
+          <p className="text-sm md:text-2xl font-semibold text-primary-darkgreen 2xl:text-5xl 2xl:font-bold ">{heading}</p>
         </div>
         
         <Link href="/publications">

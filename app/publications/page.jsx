@@ -62,7 +62,7 @@ export default async function Publications () {
       
           </div>
         
-          <p className=" mt-10 text-xl md:text-3xl font-semibold text-primary-darkgreen">
+          <p className=" mt-10 text-xl md:text-3xl 2xl:text-5xl font-semibold text-primary-darkgreen">
                 Publications by Topic  
           </p>
           <hr className="mt-2  h-0.5 bg-primary-darkblue  " />
@@ -123,7 +123,7 @@ export default async function Publications () {
             </ol>
         </div>
         <div className="px-4 md:px-20">
-          <p className=" mt-10 text-xl md:text-3xl font-semibold text-primary-darkgreen">
+          <p className=" mt-10 text-xl md:text-3xl 2xl:text-5xl font-semibold text-primary-darkgreen">
             Publications by Year  
           </p>
           <hr className="mt-2  h-0.5 bg-primary-darkblue  " />

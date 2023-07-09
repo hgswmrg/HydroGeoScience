@@ -13,6 +13,7 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsOpen(false);
+    setSmallMenu(false);
   };
 
   const toggleSmallMenu = () => {

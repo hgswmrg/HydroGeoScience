@@ -10,7 +10,7 @@ const ResearchTopicsContainer = () => {
   ];
 
   return (
-    <div className='flex flex-col md:flex-row flex-wrap mt-10 md:ml-8 items-center'>
+    <div className='flex flex-col md:flex-row flex-wrap md:ml-8 items-center'>
       {data.map((item, index) => (
         <ResearchTopicCard key={index} text={item.text} imageSrc={item.imageSrc}/>
       ))}

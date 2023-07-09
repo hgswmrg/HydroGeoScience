@@ -28,13 +28,13 @@ const Research = () => {
             <p className="text-base md:text-2xl 2xl:text-6xl mb-2 md:mb-10 items-center font-bold text-primary-darkgreen">
               What is the gap?
             </p>
-            <p className="text-center md:mx-20 2xl:text-3xl text-sm md:text-base md:mt-5 font-normal">
+            <p className="text-center md:mx-20 2xl:text-3xl 2xl:px-96 text-sm md:text-base font-normal">
               Watershed management practices have negatively impacted our environment. Stump harvesting forestry practice for biomass production in North Europe is hypothesized to enhance the excessive transport of solutes (e.g., methyl mercury). Wetland drainage in North America due to agricultural intensification is hypothesized to enhance the risks of lakes Eutrophication and the risks of drought/flood. These are two simple examples of watershed management planning with negative environmental impacts. So, how can we maximize forest biomass yield and agricultural productivity, while minimizing their environmental effects?  
             </p>
-            <p className="text-base md:text-2xl mb-2 md:mb-10 mt-20 2xl:text-6xl items-center font-bold text-primary-darkgreen">
+            <p className="text-base md:text-2xl mb-2 md:mb-10  mt-20 2xl:text-6xl items-center font-bold text-primary-darkgreen">
               How do we fill the gap?
             </p>
-            <p className="text-center md:mx-20 2xl:text-3xl text-sm md:text-base md:mt-5 font-norma">
+            <p className="text-center md:mx-20 2xl:text-3xl  2xl:px-96 text-sm md:text-base font-norma">
               HydroGeoScience for Watershed Management Laboratory advances quantitative knowledge on material (water & solute) transport in deep and shallow earth’s compartments. We also explore how material transport processes vary with land developments and climate variability. This knowledge is critically required for science-based watershed management planning and, particularly, to locate areas where intensive watershed management practices can be conducted with minimal environmental impacts on local and regional ecosystems. In doing so, we develop new physics-informed statistical machine-learning models to learn and infer patterns and processes using big data.
             </p>
         </div>
@@ -42,7 +42,7 @@ const Research = () => {
       </div>
       <div className="flex flex-col md:flex-row mt-28 items-center md:items-start justify-center md:justify-start bg-primary-lightgreen p-20">
         <div className="md:w-1/2 2xl:w-1/2 mx-auto 2xl:mr-40">
-          <p className="text-base md:text-2xl 2xl:text-6xl items-center font-bold text-primary-darkgreen">Research Subjects</p>
+          <p className="text-base md:text-2xl 2xl:text-5xl items-center font-bold text-primary-darkgreen">Research Subjects</p>
           <ul className="list-disc 2xl:text-4xl 2xl:mt-10 2xl:leading-relaxed text-sm md:text-base mt-5 font-normal">
             <li>Groundwater Ecohydrology</li>
             <li>Hydro-geological Engineering</li>
@@ -55,7 +55,7 @@ const Research = () => {
           </ul>
         </div>
         <div className="md:w-1/2 md:ml-16 mt-10 md:mt-0 md:ml-0 xl:ml-10 2xl:ml-0">
-          <p className="text-base md:text-2xl 2xl:text-6xl items-center font-bold text-primary-darkgreen">NSERC subjects</p>
+          <p className="text-base md:text-2xl 2xl:text-5xl items-center font-bold text-primary-darkgreen">NSERC subjects</p>
           <ol className="list-disc 2xl:text-4xl 2xl:mt-10 2xl:leading-relaxed text-sm md:text-base mt-5 font-normal">
             <li>4504 Groundwater</li>
             <li>1007 Water Resources and Supply</li>
@@ -67,7 +67,7 @@ const Research = () => {
         </div>
       </div>
 
-      <p className=" mt-10 md:mt-40 md:mb-20 text-lg md:text-4xl 2xl:text-7xl mb-2 xl:mb-10 items-center font-bold text-primary-darkgreen">
+      <p className=" mt-10 md:mt-40 md:mb-20 text-lg md:text-4xl 2xl:text-7xl underline mb-2 xl:mb-10 items-center font-bold text-primary-darkgreen">
         Our Ongoing Research Topics
       </p>
 
