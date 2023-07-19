@@ -1,4 +1,5 @@
-import { createClient, groq } from "next-sanity";
+import { groq } from 'next-sanity';
+import {createClient} from '@sanity/client'
 
 
 export async function getNews(){
