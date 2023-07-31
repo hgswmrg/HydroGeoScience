@@ -128,7 +128,8 @@ export default async function Publications () {
           </p>
           <hr className="mt-2  h-0.5 bg-primary-darkblue  " />
         </div>
-        
+
+      <YearCard year="2023" data={filteredYearData('2023')}/>
       <YearCard year="2022" data={filteredYearData('2022')}/>
       <YearCard year="2021" data={filteredYearData('2021')}/>
       <YearCard year="2020" data={filteredYearData('2020')}/>
