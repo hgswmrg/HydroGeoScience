@@ -107,6 +107,9 @@ const Navbar = () => {
               <Link onClick={closeMenu} href="/news">News</Link>
             </li>
             <li className="p-4 mr-8 hover:bg-primary-darkgreen hover:text-white transition duration-500">
+              <Link onClick={closeMenu} href="/products">Products</Link>
+            </li>
+            <li className="p-4 mr-8 hover:bg-primary-darkgreen hover:text-white transition duration-500">
               <Link onClick={closeMenu} href="/jobs">Job Opportunities</Link>
             </li>
             <li className="p-4 mr-8 hover:bg-primary-darkgreen hover:text-white transition duration-500">
