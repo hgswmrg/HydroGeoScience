@@ -1,3 +1,6 @@
+
+import { Analytics } from '@vercel/analytics/react';
+
 import 'tailwindcss/tailwind.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import "@styles/globals.css";
@@ -35,6 +38,7 @@ export default async function Home () {
           <NewsAndTweets/>
           
         </div>
+        <Analytics mode={'production'} />;
     </section>
   )
 }
