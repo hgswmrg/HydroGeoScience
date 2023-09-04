@@ -34,7 +34,7 @@ export default async function Home () {
           <p className="flex items-center justify-center text-center mt-20 2xl:mt-40 mx-auto text-xl md:text-3xl 2xl:text-5xl text-primary-darkgreen">Our Ongoing Research Topics</p>
           <ResearchTopicsContainer/>
           <CardRight imageSrc={'/assets/AAmeli.jpg'} heading="Ali Ameli (Principal Investigator)" text={text2} />
-          <CardLeft imageSrc={'/assets/ubccampus.jpg'} heading="Research Group" text={text3} />
+          <CardLeft imageSrc={'/assets/Research_photo.jpg'} heading="Research Group" text={text3} />
           <NewsAndTweets/>
           
         </div>
