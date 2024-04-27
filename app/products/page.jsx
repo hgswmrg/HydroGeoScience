@@ -35,7 +35,7 @@ const Page = () => {
         <div className='relative md:mt-10 px-28 xl:px-48 2xl:px-80  w-screen h-400'>
           {/* Image */}
           <Image
-            src='/assets/darkMap.png'
+            src='/assets/MapImage2.png'
             alt='Publications Image'
             height={1000}
             width={2000}
