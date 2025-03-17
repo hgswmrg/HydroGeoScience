@@ -2,6 +2,12 @@ import React from 'react';
 import Image from 'next/legacy/image';
 import Link from "next/link";
 
+const fileLinks = [
+  { version: "V1", url: "https://ln5.sync.com/dl/35b3ba230#qnug3ujb-ihwefgun-zvg225w6-9z8dccdm" },
+  { version: "V2", url: "https://ln5.sync.com/dl/35b3ba230#qnug3ujb-ihwefgun-zvg225w6-9z8dccdm" },
+  { version: "V3", url: "https://ln5.sync.com/dl/35b3ba230#qnug3ujb-ihwefgun-zvg225w6-9z8dccdm" }
+];
+
 const Page = () => {
   return (
     <div className='w-screen h-full flex flex-col items-center mb-20'>
@@ -17,12 +23,11 @@ const Page = () => {
           objectPosition="center"
           layout="responsive"
         />
-      
-    </div>
-    <div className="absolute top-0 mt-12 md:mt-40 2xl:mt-80 w-full h-400 flex flex-col items-center">
-      <p className="font-bold text-xl md:text-5xl xl:text-6xl 2xl:text-9xl 2xl:pt-10 mb-5 text-primary-darkgreen">
-        Our Products
-      </p>
+        <div className="absolute top-0 mt-12 md:mt-40 2xl:mt-80 w-full h-400 flex flex-col items-center">
+          <p className="font-bold text-xl md:text-5xl xl:text-6xl 2xl:text-9xl 2xl:pt-10 mb-5 text-primary-darkgreen">
+            Our Products
+          </p>
+        </div>
     </div>
     
         <p className='font-bold text-2xl md:text-4xl 2xl:text-7xl text-primary-darkblue mt-10 mb-5'>
@@ -51,7 +56,22 @@ const Page = () => {
             >
                 Explore the map!
             </button>
+
+
             </Link>
+
+            {/* Cards for file links */}
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 px-10 md:px-20 2xl:px-60">
+                {fileLinks.map((file, index) => (
+                  <Link key={index} href={file.url}>
+                    <div className="border rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow cursor-pointer text-center bg-white">
+                      <p className="text-xl md:text-2xl font-semibold text-primary-darkblue">Download {file.version}</p>
+                      <p className="text-sm md:text-base mt-2 text-gray-600">Click to download {file.version} file</p>
+                    </div>
+                  </Link>
+            ))}
+            </div>
+          
             
       </div>
     
