@@ -9,7 +9,7 @@ const YearCard = ({year, data}) => {
         <p className="text-lg md:text-2xl 2xl:text-4xl font-semibold text-primary-darkgreen">{year}</p>
         <ol className="text-sm md:text-base  2xl:text-2xl 2xl:tracking-wide font-medium   mt-5 p-4  list-decimal">
         {data.map((item, index) => (
-            <Link href={item.link} key={index}>
+            <Link href={item.link || "#"} key={index}>
                 <li className="mb-2">
                   <div className="flex">
                     <p className='mr-2'>{item.title } </p>

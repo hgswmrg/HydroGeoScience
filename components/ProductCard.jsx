@@ -8,15 +8,7 @@ const ProductCard = ({ product }) => {
   return (
     <div key={product._id} className="product-card bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform transform hover:scale-105 duration-300">
       <Link href={product.link} passHref>
-      {/* Product Image */}
-      {/* <div className="relative w-full h-60">
-        <Image
-          src={product.image}
-          alt={product.name}
-          width={100}
-          height={100}
-        />
-      </div> */}
+    
       <Image className="p-5 mt-10" src={product.image} width={20} height={21} alt="Card Image" layout="responsive" 
               sizes="(max-width: 100px) 50vw,
               (max-height: 100px) 50vw"/>
