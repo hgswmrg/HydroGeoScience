@@ -8,4 +8,7 @@ First, run the development server:
 npm run dev
 
 ```
-slight change to trigger deployment
+
+
+## To run the CMS tool:
+do ``` cd backend ``` and then run the server using the same command as above.
