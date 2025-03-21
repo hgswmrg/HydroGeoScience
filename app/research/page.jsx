@@ -23,12 +23,12 @@ const Research = () => {
       
     </div>
       
-      <div className="flex flex-col md:flex-row mt-20 items-center md:items-start justify-center md:justify-start bg-primary-lightgreen p-20">
+      <div className="flex flex-col md:flex-row mt-20 gap-20 items-center md:items-start justify-center md:justify-start bg-primary-lightgreen p-20 2xl:mx-10">
         <div className="md:w-1/2 2xl:w-1/2 mx-auto 2xl:mr-40 mx-20 ">
-            <p className="text-base md:text-2xl xl:text-3xl 2xl:text-6xl mb-2 md:mb-10 text-left font-bold text-primary-darkgreen mx-auto ">
+            <p className="text-base md:text-2xl xl:text-3xl 2xl:text-6xl mb-2 md:mb-10 text-center font-bold text-primary-darkgreen mx-auto ">
               What is the gap?
             </p>
-            <p className="text-left md:text-s 2xl:text-3xl text-sm md:text-base font-normal mr-10">
+            <p className="text-justified md:text-s 2xl:text-3xl text-sm md:text-base font-normal ">
             While aiming to support resource use, watershed management practices have often resulted in
             unintended environmental impacts. For example, stump harvesting for biomass production in
             Northern Europe is believed to increase the transport of harmful solutes such as methyl mercury.
@@ -39,8 +39,8 @@ const Research = () => {
             research group works to address this gap by developing science-based tools and knowledge that
             help balance resource development with environmental protection in watershed management.
             </p>
-          <p className="text-base md:text-2xl 2xl:text-5xl text-left font-bold text-primary-darkgreen mt-20">Research Subjects</p>
-          <ul className=" 2xl:text-3xl 2xl:mt-10 2xl:leading-relaxed text-sm md:text-base mt-5 font-normal text-left">
+          <p className="text-base md:text-2xl 2xl:text-5xl text-center font-bold text-primary-darkgreen mt-20">Research Subjects</p>
+          <ul className=" 2xl:text-3xl 2xl:mt-10 2xl:leading-relaxed text-sm md:text-base mt-5 font-normal text-center">
             <li>Groundwater Ecohydrology</li>
             <li>Hydro-geological Engineering</li>
             <li>Watershed Management</li>
@@ -52,10 +52,10 @@ const Research = () => {
           </ul>
         </div>
         <div className="md:w-1/2 md:ml-16 mt-10 md:mt-0 md:ml-0 xl:ml-10 2xl:ml-0">
-            <p className="text-base md:text-3xl 2xl:text-6xl mb-2 md:mb-10 text-right font-bold text-primary-darkgreen mx-auto ">
+            <p className="text-base md:text-3xl 2xl:text-6xl mb-2 md:mb-10 text-center font-bold text-primary-darkgreen mx-auto ">
             How we make an Impact?
             </p>
-            <p className="text-right ml-10 2xl:text-3xl text-sm md:text-base font-normal">
+            <p className="text-justified 2xl:text-3xl text-sm md:text-base font-normal">
             The HydroGeoScience for Watershed Management Laboratory works to advance quantitative
             understanding of how water and solutes move through both shallow and deep parts of the Earth.
             We investigate how these transport processes are influenced by land development and climate
@@ -66,8 +66,8 @@ const Research = () => {
             datasets to detect key patterns and processes in watershed systems. Through this approach, we
             provide the tools and knowledge needed to support effective, sustainable watershed management.
             </p>
-          <p className="text-base md:text-2xl xl:text-3xl 2xl:text-5xl text-right font-bold text-primary-darkgreen mt-20">NSERC subjects</p>
-          <ol className="2xl:mt-10 2xl:leading-relaxed text-sm md:text-base xl:text-base 2xl:text-3xl  mt-5 font-normal text-right">
+          <p className="text-base md:text-2xl xl:text-3xl 2xl:text-5xl text-center font-bold text-primary-darkgreen mt-20">NSERC subjects</p>
+          <ol className="2xl:mt-10 2xl:leading-relaxed text-sm md:text-base xl:text-base 2xl:text-3xl  mt-5 font-normal text-center">
             <li>4504 Groundwater</li>
             <li>1007 Water Resources and Supply</li>
             <li>1501 Water Quality</li>

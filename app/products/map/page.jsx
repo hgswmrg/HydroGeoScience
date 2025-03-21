@@ -23,11 +23,7 @@ const Page = () => {
           objectPosition="center"
           layout="responsive"
         />
-        <div className="absolute top-0 mt-12 md:mt-20 2xl:mt-40 w-full h-400 flex flex-col items-center">
-          <p className="font-bold text-xl md:text-5xl xl:text-6xl 2xl:text-9xl 2xl:pt-10 mb-5 text-primary-darkgreen">
-            Our Products
-          </p>
-        </div>
+        
     </div>
     
         <p className='font-bold text-2xl md:text-4xl 2xl:text-7xl text-primary-darkblue mt-10 mb-5'>
