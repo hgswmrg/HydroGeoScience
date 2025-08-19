@@ -18,6 +18,15 @@ export default {
           hotspot: true,
         },
       },
+      {
+        name: 'displayDate',
+        title: 'Display Date',
+        type: 'date',
+        options: {
+          dateFormat: 'YYYY-MM-DD',
+          calendarTodayLabel: 'Today'
+        }
+      },
     ],
   };
   

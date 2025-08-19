@@ -32,6 +32,18 @@ export default {
         options: {
           hotspot: true,
         },
+      },
+      {
+        name: 'publishedAt',
+        title: 'Published at',
+        type: 'datetime',
+        options: {
+          dateFormat: 'YYYY-MM-DD',
+          timeFormat: 'HH:mm',
+          timeStep: 15,
+          calendarTodayLabel: 'Today'
+        },
+        validation: (Rule) => Rule.required()
       }
     ],
   };

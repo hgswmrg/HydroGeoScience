@@ -10,7 +10,7 @@ export async function getNews(){
     });
 
     return client.fetch(
-        groq`*[_type == "news"]`
+        groq`*[_type == "news"] | order(publishedAt desc)`
     )
 }
 
@@ -89,9 +89,10 @@ export async function getCarousel () {
     });
 
     return client.fetch(
-        groq`*[_type == "carousel"]{
+        groq`*[_type == "carousel"] | order(displayDate desc) {
             name,
             "image" : newsImage.asset->url,
+            displayDate
         }`
     )
     
