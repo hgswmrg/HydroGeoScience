@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { getNews } from '@backend/sanity-utils';
 import Link from 'next/link';
-import {RiExternalLinkLine} from 'react-icons/ri';
+ 
 
 
 export default function News() {
@@ -43,21 +43,34 @@ export default function News() {
             }`}
           >
               <h2 className="text-base md:text-xl font-bold 2xl:text-3xl">{newsItem.title}</h2>
-              <div className="flex">
+              <div className="mt-1">
                 <p className="text-sm md:text-base 2xl:text-2xl text-gray-900 my-1 font-normal">{newsItem.description}</p>
-                <Link className="mt-1" href="/team/graduates"> <RiExternalLinkLine classname="" size={20} color="#0072b1"/> </Link>
+                {newsItem.link ? (
+                  <Link
+                    className="text-primary-darkgreen underline hover:opacity-80"
+                    href={newsItem.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read full story
+                  </Link>
+                ) : null}
               </div>
-              <button
-              className="text-primary-darkgreen 2xl:text-2xl underline"
-              onClick={() => handleToggleExpand(index)}
-            >
-              {expandedIndex === index ? 'Close' : 'Read More'}
-            </button>
-              {expandedIndex === index ? 
-                <p className="text-sm md:text-base 2xl:text-2xl text-gray-900 my-1 font-normal">
-                  {newsItem.longdescription}
-                </p> : ''
-                }
+              {newsItem.longdescription ? (
+                <>
+                  <button
+                    className="text-primary-darkgreen 2xl:text-2xl underline"
+                    onClick={() => handleToggleExpand(index)}
+                  >
+                    {expandedIndex === index ? 'Close' : 'Read More'}
+                  </button>
+                  {expandedIndex === index ? 
+                    <p className="text-sm md:text-base 2xl:text-2xl text-gray-900 my-1 font-normal">
+                      {newsItem.longdescription}
+                    </p> : ''
+                  }
+                </>
+              ) : null}
             </div>
           ))}
         </div>

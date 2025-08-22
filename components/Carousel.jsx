@@ -87,7 +87,7 @@ const CarouselWithText = ({ data }) => {
 
         {carouselData.map((item, index) => (
           <div key={index} className="relative w-screen h-500">
-            <Link href="/team/graduates">
+            <Link href= "/news">
               <Image
                 src={item.image}
                 alt="Landing Page Image"
