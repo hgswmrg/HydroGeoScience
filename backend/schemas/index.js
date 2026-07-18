@@ -4,5 +4,6 @@ import profile from './profile';
 import publications from './publications';
 import carousel from './carousel';
 import products from './products';
+import scienceCommunication from './scienceCommunication';
 
-export const schemaTypes = [news, jobs, profile, publications, carousel, products ]
+export const schemaTypes = [news, jobs, profile, publications, carousel, products, scienceCommunication ]

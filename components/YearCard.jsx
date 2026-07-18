@@ -14,7 +14,7 @@ const YearCard = ({year, data}) => {
                   <div className="flex">
                     <p className='mr-2'>{item.title } </p>
                       <div className="transform hover:scale-110 duration-500">
-                          <RiExternalLinkLine classname="" size={20} color="#0072b1"/> 
+                          <RiExternalLinkLine className="" size={20} color="#0072b1"/> 
                         </div>
                     </div>
                 </li>

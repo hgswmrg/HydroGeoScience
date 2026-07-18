@@ -21,7 +21,7 @@ const Footer = () => {
           <Link href="https://github.com/hgwm" className='mr-10 transform hover:scale-110 duration-500'>
             <AiFillGithub size={30} color="black"/>
           </Link>
-          <Link  classname="transform hover:scale-110 duration-500" href="https://twitter.com/a_ameli2">
+          <Link  className="transform hover:scale-110 duration-500" href="https://twitter.com/a_ameli2">
             <FaTwitter size={30} color="black"/>
           </Link>
         </div>
