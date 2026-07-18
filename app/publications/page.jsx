@@ -33,21 +33,20 @@ export default function Publications() {
   return (
     <section className="w-full flex flex-col mb-20">
       {/* Image Header */}
-      <div className="relative w-screen h-[400px]">
+      <div className="relative w-full h-52 md:h-[400px]">
         <Image
           src="/assets/publications.jpg"
           alt="Publications Image"
-          height={700}
-          width={3000}
+          layout="fill"
           objectFit="cover"
           objectPosition="center"
-          layout="responsive"
         />
-        <div className="absolute top-0 mt-12 md:mt-60 w-full h-400 flex flex-col items-center">
-        <p className="font-bold text-xl md:text-5xl xl:text-6xl 2xl:text-9xl 2xl:pt-10 mb-5 text-white">
-          Publications
-        </p>
-      </div>
+        <div className="absolute inset-0 bg-black bg-opacity-20" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <p className="font-bold text-2xl md:text-5xl xl:text-6xl 2xl:text-8xl text-white text-center px-4">
+            Publications
+          </p>
+        </div>
       </div>
 
       
