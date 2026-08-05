@@ -5,5 +5,6 @@ import publications from './publications';
 import carousel from './carousel';
 import products from './products';
 import scienceCommunication from './scienceCommunication';
+import gallery from './gallery';
 
-export const schemaTypes = [news, jobs, profile, publications, carousel, products, scienceCommunication ]
+export const schemaTypes = [news, jobs, profile, publications, carousel, products, scienceCommunication, gallery ]
