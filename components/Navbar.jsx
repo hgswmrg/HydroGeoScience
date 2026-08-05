@@ -102,6 +102,9 @@ const Navbar = () => {
                   <li className="p-2 hover:bg-primary-darkgreen hover:text-white transition duration-500">
                     <Link onClick={closeSmallMenu} href="/team/alumni">Alumni</Link>
                   </li>
+                  <li className="p-2 hover:bg-primary-darkgreen hover:text-white transition duration-500">
+                    <Link onClick={closeSmallMenu} href="/team/gallery">Gallery</Link>
+                  </li>
                 </ul>
               </div>
               

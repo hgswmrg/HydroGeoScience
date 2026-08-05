@@ -81,6 +81,28 @@ export async function getProfile () {
     
 }
 
+export async function getGallery () {
+    const client = createClient({
+        projectId: "wefrxt7t",
+        dataset: "production",
+        apiVersion: "2023-03-09",
+    });
+
+    return client.fetch(
+        groq`*[_type == "gallery"] | order(year desc) {
+            _id,
+            year,
+            title,
+            "photos": photos[]{
+                caption,
+                "url": asset->url,
+                "alt": asset->altText
+            }
+        }`
+    )
+
+}
+
 export async function getScienceCommunications () {
     const client = createClient({
         projectId: "wefrxt7t",
