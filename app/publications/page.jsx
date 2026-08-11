@@ -54,10 +54,6 @@ export default function Publications() {
       {/* Links */}
       <div className="w-full px-4 md:px-20">
         <div className="flex mt-7 md:mt-20">
-          <Link href="https://scholar.google.com/citations?user=L6LeKWcAAAAJ&hl=en" className="flex text-primary-darkblue mr-20">
-            <FaGraduationCap size={30} color="#03045e"/>
-            <p className="ml-3 mt-1 md:mt-0 text-sm md:text-lg underline">Google Scholar</p>
-          </Link>
           <Link href="https://orcid.org/0000-0002-8173-887X" className="flex text-primary-darkblue">
             <FaOrcid size={30} color="#A6CE39"/>
             <p className="ml-3 mt-1 md:mt-0 text-sm md:text-lg underline">ORCID</p>
