@@ -35,11 +35,12 @@ export async function getProducts() {
     });
   
     return client.fetch(
-      groq`*[_type == "products"]{
+      groq`*[_type == "products"] | order(coalesce(displayDate, _createdAt) desc){
         _id,
         name,
         description,
         link,
+        displayDate,
         "image": image.asset->url
       }`
     );
@@ -54,9 +55,9 @@ export async function getPublications () {
     });
 
     return client.fetch(
-        groq`*[_type == "publications"]`
+        groq`*[_type == "publications"] | order(coalesce(year, "0") desc)`
     )
-    
+
 }
 
 export async function getProfile () {
