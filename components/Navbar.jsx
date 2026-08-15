@@ -1,11 +1,75 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import {IoMdArrowDropdown} from 'react-icons/io'
+
+const MENU_FADE_DURATION_S = 0.15;
+const MENU_SLIDE_DISTANCE_PX = 8;
+
+const TEAM_LINKS = [
+  { href: "/team/management", label: "Lab management" },
+  { href: "/team/affiliated", label: "Affiliated Researchers" },
+  { href: "/team/graduates", label: "Graduate Students" },
+  { href: "/team/undergraduate", label: "Undergraduate Students" },
+  { href: "/team/alumni", label: "Alumni" },
+  { href: "/team/gallery", label: "Gallery" },
+];
+
+const OUTREACH_LINKS = [
+  { href: "/science-communication/presentations", label: "Invited Presentations" },
+  { href: "/science-communication/pieces", label: "Science Communication Pieces" },
+];
+
+// A top-level nav item that also opens a submenu. The label and caret share one
+// hover target so the whole item highlights together, and the menu opens on
+// hover as well as click for pointer and keyboard users alike.
+const NavDropdown = ({ label, href, links, width, isOpen, onOpen, onClose, onToggle }) => {
+  const shouldReduceMotion = useReducedMotion();
+
+  return (
+    <li className="relative" onMouseEnter={onOpen} onMouseLeave={onClose}>
+      <div className="flex items-center pl-4 pr-2 py-4 mr-8 hover:bg-primary-darkgreen hover:text-white transition duration-500">
+        <Link onClick={onClose} href={href}>{label}</Link>
+        <button
+          onClick={onToggle}
+          aria-label={`${label} pages`}
+          aria-expanded={isOpen}
+          className="hidden sm:flex items-center ml-1 focus:outline-none"
+        >
+          <IoMdArrowDropdown
+            size={24}
+            className={`transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+          />
+        </button>
+      </div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.ul
+            initial={{ opacity: 0, y: shouldReduceMotion ? 0 : -MENU_SLIDE_DISTANCE_PX }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: shouldReduceMotion ? 0 : -MENU_SLIDE_DISTANCE_PX }}
+            transition={{ duration: MENU_FADE_DURATION_S }}
+            className={`hidden sm:block absolute left-0 top-full z-20 bg-white text-gray-600 ${width} py-2 rounded-lg shadow-lg border-t-2 border-primary-darkgreen`}
+          >
+            {links.map((item) => (
+              <li key={item.href} className="hover:bg-primary-darkgreen hover:text-white transition duration-500">
+                <Link onClick={onClose} href={item.href} className="block px-4 py-2 text-base 2xl:text-xl">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </li>
+  );
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [smallMenu, setSmallMenu] = useState(false)
+  const [outreachMenu, setOutreachMenu] = useState(false)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -14,14 +78,35 @@ const Navbar = () => {
   const closeMenu = () => {
     setIsOpen(false);
     setSmallMenu(false);
+    setOutreachMenu(false);
+  };
+
+  const openSmallMenu = () => {
+    setSmallMenu(true);
+    setOutreachMenu(false);
   };
 
   const toggleSmallMenu = () => {
     setSmallMenu(!smallMenu);
+    setOutreachMenu(false);
   }
 
   const closeSmallMenu = () => {
     setSmallMenu(false);
+  };
+
+  const openOutreachMenu = () => {
+    setOutreachMenu(true);
+    setSmallMenu(false);
+  };
+
+  const toggleOutreachMenu = () => {
+    setOutreachMenu(!outreachMenu);
+    setSmallMenu(false);
+  }
+
+  const closeOutreachMenu = () => {
+    setOutreachMenu(false);
   };
 
 
@@ -69,46 +154,40 @@ const Navbar = () => {
             <li className="p-4 mr-8 hover:bg-primary-darkgreen hover:text-white transition duration-500">
               <Link onClick={closeMenu} href="/publications">Publications</Link>
             </li>
-            <li className="p-4 mr-8 hover:bg-primary-darkgreen hover:text-white transition duration-500">
-              <Link onClick={closeMenu} href="/science-communication">Outreach</Link>
-            </li>
-            <li className="pl-4 py-4 mr-12 md:mr-0 hover:bg-primary-darkgreen hover:text-white transition duration-500">
-              <Link onClick={closeMenu} href="/team">Team</Link>
-            </li>
-            <li className="relative group mr-8">
-           
-              <div className="sm:flex hidden hover:bg-primary-darkgreen hover:text-white transition duration-500">
-                <button onClick={toggleSmallMenu} className="flex items-center">
-                  
-                  <IoMdArrowDropdown size={24}/>
-                </button>
-              </div>
-              <div className={`${
-                smallMenu ? "flex flex-col items-center" : "hidden"
-              }  font-medium text-white gap-4 `}>
-                <ul className="absolute  left-0 z-10 bg-white text-gray-600 w-48 py-2 rounded-lg shadow-lg">
-                <li className="p-2 hover:bg-primary-darkgreen hover:text-white transition duration-500">
-                    <Link onClick={closeSmallMenu} href="/team/management">Lab management</Link>
-                  </li>
-                  <li className="p-2 hover:bg-primary-darkgreen hover:text-white transition duration-500">
-                    <Link onClick={closeSmallMenu} href="/team/affiliated">Affiliated Researchers</Link>
-                  </li>
-                  <li className="p-2 hover:bg-primary-darkgreen hover:text-white transition duration-500">
-                    <Link onClick={closeSmallMenu} href="/team/graduates">Graduate Students</Link>
-                  </li>
-                  <li className="p-2 hover:bg-primary-darkgreen hover:text-white transition duration-500">
-                    <Link onClick={closeSmallMenu} href="/team/undergraduate">Undergraduate Students</Link>
-                  </li>
-                  <li className="p-2 hover:bg-primary-darkgreen hover:text-white transition duration-500">
-                    <Link onClick={closeSmallMenu} href="/team/alumni">Alumni</Link>
-                  </li>
-                  <li className="p-2 hover:bg-primary-darkgreen hover:text-white transition duration-500">
-                    <Link onClick={closeSmallMenu} href="/team/gallery">Gallery</Link>
-                  </li>
-                </ul>
-              </div>
-              
-            </li>
+
+            <NavDropdown
+              label="Outreach"
+              href="/science-communication"
+              links={OUTREACH_LINKS}
+              width="w-64"
+              isOpen={outreachMenu}
+              onOpen={openOutreachMenu}
+              onClose={closeOutreachMenu}
+              onToggle={toggleOutreachMenu}
+            />
+            {/* Sub-pages listed inline in the mobile menu, where the caret is hidden */}
+            {OUTREACH_LINKS.map((item) => (
+              <li key={item.href} className="sm:hidden p-2 text-base text-gray-500 hover:bg-primary-darkgreen hover:text-white transition duration-500">
+                <Link onClick={closeMenu} href={item.href}>{item.label}</Link>
+              </li>
+            ))}
+
+            <NavDropdown
+              label="Team"
+              href="/team"
+              links={TEAM_LINKS}
+              width="w-56"
+              isOpen={smallMenu}
+              onOpen={openSmallMenu}
+              onClose={closeSmallMenu}
+              onToggle={toggleSmallMenu}
+            />
+            {TEAM_LINKS.map((item) => (
+              <li key={item.href} className="sm:hidden p-2 text-base text-gray-500 hover:bg-primary-darkgreen hover:text-white transition duration-500">
+                <Link onClick={closeMenu} href={item.href}>{item.label}</Link>
+              </li>
+            ))}
+
             <li className="p-4 mr-8 hover:bg-primary-darkgreen hover:text-white transition duration-500">
               <Link onClick={closeMenu} href="/news">News</Link>
             </li>

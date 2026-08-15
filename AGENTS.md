@@ -45,9 +45,11 @@ No build-time env vars are required to run the frontend (Sanity project ID is ha
 | `/` | `app/page.jsx` | Server component, fetches carousel from Sanity |
 | `/research` | `app/research/page.jsx` | |
 | `/publications` | `app/publications/page.jsx` | Sanity `publications`, grouped by year (`YearCard`) |
+| `/science-communication` | `app/science-communication/page.jsx` | "Outreach" in the nav. Sub-pages `/presentations` and `/pieces` filter Sanity `scienceCommunication` by `section`. All three render the shared `components/SciCommPage.jsx` |
 | `/team` | `app/team/page.jsx` | Sub-pages: `/team/management`, `/team/affiliated`, `/team/graduates`, `/team/undergraduate`, `/team/alumni` — all filter Sanity `profile` docs by `profileType` |
+| `/team/gallery` | `app/team/gallery/page.jsx` | Photo grid by year from Sanity `gallery`, with `components/Lightbox.jsx` overlay |
 | `/news` | `app/news/page.jsx` | Sanity `news` |
-| `/products` | `app/products/page.jsx` | Sanity `products`; `/products/map` embeds map |
+| `/products` | `app/products/page.jsx` | Sanity `products`, newest first; `/products/map` embeds map |
 | `/map` | `app/map/page.jsx` | iframe of Google Earth Engine app: `https://hgswmrg.users.earthengine.app/view/map` |
 | `/jobs` | `app/jobs/page.jsx` | Sanity `jobs` |
 | `/contact` | `app/contact/page.jsx` | Client component; sends mail via **EmailJS** (`@emailjs/browser`) from the browser |
@@ -57,10 +59,17 @@ No build-time env vars are required to run the frontend (Sanity project ID is ha
 ## Data Layer (Sanity)
 
 - **Project ID:** `wefrxt7t`, **dataset:** `production`, **apiVersion:** `2023-03-09` — hardcoded in every function in `backend/sanity-utils.ts` (a new `createClient` per function; consolidate carefully if refactoring).
-- Fetch functions: `getNews()`, `getJobs()`, `getProducts()`, `getPublications()`, `getProfile()`, `getCarousel()`.
-- Content types (schemas in `backend/schemas/`): `news`, `jobs`, `profile`, `publications`, `carousel`, `products`.
+- Fetch functions: `getNews()`, `getJobs()`, `getProducts()`, `getPublications()`, `getProfile()`, `getCarousel()`, `getScienceCommunications()`, `getGallery()`.
+- Content types (schemas in `backend/schemas/`): `news`, `jobs`, `profile`, `publications`, `carousel`, `products`, `scienceCommunication`, `gallery`.
 - Images come from `cdn.sanity.io` (whitelisted in `next.config.js`); queries dereference them as `"image": image.asset->url`.
-- `carousel` and `news` are ordered by date (`displayDate desc` / `publishedAt desc`).
+- Ordering: `carousel`/`news` by date (`displayDate desc` / `publishedAt desc`); `products` by `coalesce(displayDate, _createdAt) desc` so undated docs still fall back to creation date; `gallery` by `year desc`; `scienceCommunication` by `coalesce(displayDate, "0001-01-01") desc`.
+- After adding or changing a schema, run `cd backend && npm run deploy` so the **hosted** studio picks up the new type. A local studio (`npm run dev`) sees changes immediately.
+
+### Editor-facing image guidelines
+
+Schema `description` fields are where content guidance lives, so editors see it in the studio rather than hunting for docs. Current standard:
+
+- **Product cover photos:** landscape 16:9, ideally 1600 × 900 px (min 1200 × 675), PNG or JPG. `ProductCard` renders every cover in a fixed `aspect-video` frame with `object-contain`, so off-ratio images are centered and letterboxed rather than cropped — nothing is cut off, but they look inconsistent next to conforming images.
 
 ## Styling & Design System
 
