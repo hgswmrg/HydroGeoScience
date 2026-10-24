@@ -61,6 +61,18 @@ export default function Publications() {
         </div>
       </div>
 
+      {/* Publications by Year */}
+      <div className="px-4 md:px-20">
+        <p className="mt-10 text-xl md:text-3xl 2xl:text-5xl font-semibold text-primary-darkgreen">
+          Publications by Year
+        </p>
+        <hr className="mt-2 h-0.5 bg-primary-darkblue" />
+      </div>
+
+      {uniqueYears.map((year) => (
+        <YearCard key={year} year={year} data={filteredYearData(year)} />
+      ))}
+
       {/* Publications by Topic */}
       <div className="px-4 md:px-20">
         <p className="mt-10 text-xl md:text-3xl 2xl:text-5xl font-semibold text-primary-darkgreen">
@@ -92,18 +104,6 @@ export default function Publications() {
             ))}
           </ol>
         </div>
-      ))}
-
-      {/* Publications by Year */}
-      <div className="px-4 md:px-20">
-        <p className="mt-10 text-xl md:text-3xl 2xl:text-5xl font-semibold text-primary-darkgreen">
-          Publications by Year
-        </p>
-        <hr className="mt-2 h-0.5 bg-primary-darkblue" />
-      </div>
-
-      {uniqueYears.map((year) => (
-        <YearCard key={year} year={year} data={filteredYearData(year)} />
       ))}
     </section>
   );
